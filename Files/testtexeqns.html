@@ -26,6 +26,56 @@
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
+    header {
+            background-color: #4E3629;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    /* Dropdown styles */
+        .dropdown {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .dropdown-button {
+            background-color: #333; /* Gray background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-button {
+            background-color: #3e8e41; /* Darker green */
+        }
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
@@ -184,6 +234,19 @@
   </style>
 </head>
 <body>
+  <header>
+        <h1>Welcome to ENGN 1210: Biomechanics</h1>
+      
+  <div class="dropdown">
+        <button class="dropdown-button">Menu</button>
+        <div class="dropdown-content">
+            <a href="/ENGN1210Website/index.html">Home</a>
+            <a href="/ENGN1210Website/Files/testtexeqns.html">Eqns</a>
+            <a href="/ENGN1210Website/Files/testtextconvert.html">Text</a>
+            <a href="/ENGN1210Website/Files/pdfembed.html">PDF</a>
+        </div>
+    </div>
+    </header>
 <header id="title-block-header">
 <h1 class="title">A Lab-on-a-Chip Design for
 Cancer-Associated-Fibroblast Transcriptomic Profiling</h1>
