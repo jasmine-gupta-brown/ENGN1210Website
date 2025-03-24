@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="ENGN 1210 Course Page">
+	<title>ENGN 1210 - A Lab-on-a-Chip Design for Cancer-Associated-Fibroblast Transcriptomic Profiling</title>
+	<link rel="stylesheet" href="styles.css"> <!-- Optional external CSS -->
+	<script type="text/javascript" async
+    	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+  <style>
+    	body {
+        	font-family: Arial, sans-serif;
+        	background-color: #f0f0f0;
+        	margin: 0;
+        	padding: 0;
+    	}
+    	header {
+        	background-color: #4E3629;
+        	color: white;
+        	padding: 20px;
+        	text-align: center;
+    	}
+    	.container {
+        	padding: 20px;
+    	}
+    	h2 {
+        	color: #333;
+    	}
+    	.content {
+        	background-color: white;
+        	border-radius: 8px;
+        	padding: 20px;
+        	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    	}
+    	footer {
+        	background-color: #333333;
+        	color: white;
+        	text-align: center;
+        	padding: 10px;
+        	width: 100%;
+        	bottom: 0;
+    	}
+    	/* Side Menu Styles */
+    	.btn {
+        	position: absolute;
+        	top: 10px;
+        	right: 10px;
+    	}
+    	.side-menu {
+        	height: 100%;
+        	width: 0;
+        	position: fixed;
+        	top: 0;
+        	right: 0;
+        	background-color: #333;
+        	overflow-x: hidden;
+        	transition: 0.5s;
+        	padding-top: 60px;
+        	z-index: 1000;
+    	}
+
+    	.side-menu a {
+        	padding: 8px 16px;
+        	text-decoration: none;
+        	font-size: 25px;
+        	color: white;
+        	display: block;
+        	transition: 0.3s;
+    	}
+
+    	.side-menu a:hover {
+        	background-color: #ddd;
+        	color: black;
+    	}
+
+    	.side-menu .close-btn {
+        	position: absolute;
+        	top: 20px;
+        	right: 20px;
+        	font-size: 36px;
+        	color: white;
+        	cursor: pointer;
+    	}
+
+    	.open-btn {
+        	font-size: 20px;
+        	color: white;
+        	background-color: #950F11;
+        	padding: 10px 20px;
+        	border: none;
+        	cursor: pointer;
+        	font-size: 16px;
+        	border-radius: 5px;
+    	}
+
+    	/* Button to open the menu */
+    	.open-btn:hover {
+        	background-color: #CC1417;
+    	}
+	</style>
+</head>
+<body>
+  <header>
+    	<h1>Welcome to ENGN 1210: Biomechanics</h1>
+    	<p>Your journey into the world of biomechanics begins here.</p>
+	</header>
+	<div class = "btn">
+	<button class="open-btn" onclick="openMenu()">Menu</button>
+	<!-- The side menu -->
+	<div id="sideMenu" class="side-menu">
+    	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+    	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Files/testtexeqns.html">Eqns</a>
+    	<a href="/ENGN1210Website/Files/testtextconvert.html">Text</a>
+    	<a href="/ENGN1210Website/Files/pdfembed.html">PDF</a>
+    	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
+<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
+<a href="/ENGN1210Website/LinearStiffness/Linear Stiffness Main.html">Linear Stiffness</a>
+	</div>
+	</div>
+
+	<!-- Page Content -->
+<div class="container">
+	<div class="content">
+  	<h1>Thin Walled Pressure Vessels</h1>
+  	<div class="Large">
+<div class="flushleft">
+<p><u>Thin Walled Cylinder</u><br />
+</p>
+<div class="large">
+<p>Blood vessels, airways, ureters are examples of pressurized
+cylindrical tubes in biology.<br />
+Many bio-medical/clinical devices such as<br />
+</p>
+<ul>
+<li><p>Heart/lung ventilator tubes</p></li>
+<li><p>Kidney dialysis units</p></li>
+<li><p>Catheters for balloon angioplasty</p></li>
+<li><p>IV pumps utilize pressurized tubes</p></li>
+</ul>
+<p>Stresses from internal pressures are important to
+predict/quantify!</p>
+<figure>
+<img src="Figure 1.png" />
+<figcaption>Internal pressure on the vessel wall</figcaption>
+</figure>
+<p>In Fig.1: t = wall thickness<br />
+Thin wall <span class="math inline">\(\Rightarrow\)</span> t <span
+class="math inline">\(\ll\)</span> R<br />
+F.B.D. of section A-B (Fig 1.)</p>
+<figure>
+<img src="Figure 2.png" />
+<figcaption>Free body diagram of the A-B section</figcaption>
+</figure>
+<p>In a thick walled cylinder <span class="math inline">\(\sigma_{\theta
+\theta}\)</span>(r) is a function of radius r.<br />
+But in <u>thin walled</u> case <span
+class="math inline">\(\sigma_{\theta \theta}(r) \approx \sigma_{\theta
+\theta}\)</span><br />
+<span class="math inline">\(\uparrow\)</span><br />
+<span class="math inline">\(\sim\)</span> constant<br />
+Y direction force balance in Fig 1. <span
+class="math inline">\(\Rightarrow\)</span><br />
+<span class="math display">\[\begin{array}{lcr}
+\sum F_{y} = 0 \Rightarrow  - \sigma_{\theta \theta} (2t . L) + \int_{A}
+( P dA )_{y} \\
+\vspace{2ex}
+\Rightarrow - \sigma_{\theta \theta} (2t L) + \int_{0}^{\pi} P ( R
+d\theta L ) sin\theta \\
+\vspace{2ex}
+\Rightarrow  \sigma_{\theta \theta} (2t L) = P R L [-cos\pi + cos0] \\
+\vspace{2ex}
+\Rightarrow  \sigma_{\theta \theta} = \dfrac{\cancel{2} P R
+\cancel{L}}{\cancel{2} t \cancel{L}}
+\Rightarrow \boxed{ \sigma_{\theta \theta} = \dfrac{P R}{t}} \\
+\vspace{1ex}
+\sigma_{r r} \sim P; \\
+\vspace{1ex}
+Since \hspace{0.5em} \dfrac{\sigma_{r r}}{\sigma_{\theta \theta}} =
+\dfrac{\cancel{P} t}{\cancel{P} R} =\dfrac{t}{R} \ll 1 \\
+\end{array}\]</span> <span class="math inline">\(\Rightarrow \sigma_{r
+r}\)</span> can be neglected compared to <span
+class="math inline">\(\sigma_{\theta \theta}\)</span>.<br />
+</p>
+<div class="large">
+<p><u>THIN WALL CYLINDER</u></p>
+</div>
+<p><span class="math display">\[\boxed{
+\begin{array}{ccc}
+\sigma_{r r} \sim P \simeq 0 \\
+\vspace{2ex}
+\sigma_{\theta \theta} = \dfrac{P R}{t} \\
+\vspace{2ex}
+\sigma_{z z} = 0 $\hspace{0.5em} for open end tube$ ; \sigma_{z z} =
+\dfrac{P R}{2 t} $\hspace{0.5em} for closed end tube$\\
+\end{array}
+}\]</span><br />
+For closed end tube :-<br />
+</p>
+<figure>
+<img src="Figure 3.png" />
+<figcaption>Internal pressure on a closed end tube</figcaption>
+</figure>
+<figure>
+<img src="Figure 4.png" />
+<figcaption>Free body diagram of the tube with pressure at the closed
+end</figcaption>
+</figure>
+<p>Along z direction :-<br />
+<span class="math display">\[\begin{array}{lll}
+\sigma_{z z}(2 \pi R t) = \pi R^{2} P \\
+\Rightarrow \boxed{ \sigma_{z z} = \dfrac{P R}{2 t}}
+\end{array}\]</span> <span class="math inline">\(\uparrow\)</span><br />
+for closed wall cylindrical tube<br />
+</p>
+</div>
+<hr />
+<p>Pressurization of Thin Spherical Structures <span
+class="math inline">\(\rightarrow\)</span><br />
+</p>
+<div class="large">
+<p>Consider following biological examples :-<br />
+- Eyeball<br />
+- Spherization of red blood cells<br />
+- Urinary bladder<br />
+- Intracranial saccular aneurysms<br />
+</p>
+<figure>
+<img src="Figure 5.png" />
+<figcaption>Representation of intracranial saccular
+aneurysm</figcaption>
+</figure>
+<figure>
+<img src="Figure 6.png" />
+<figcaption>Cross-section of the aneurysm</figcaption>
+</figure>
+<p>Consider cut A-B<br />
+</p>
+<figure>
+<img src="Figure 7.png" />
+<figcaption>Free body diagram of the cross-section A-B</figcaption>
+</figure>
+<p>Force balance along x direction :-<br />
+<span class="math display">\[\begin{array}{lcr}
+\sum F_{x} = 0\\
+\\
+\Rightarrow \sigma_{\theta\theta}(2 \pi R T) = \int_{A} (P dA)_{x}\\
+\\
+\hspace{6.6em} = \int \int P cos \cancel{\theta} R sin
+\cancel{\theta}  d \theta R d \cancel{\theta} \\
+\hspace{8em}\downarrow\\
+\hspace{7.5em} P \pi R^{2}\\
+\\
+
+\Rightarrow \boxed{\sigma_{\theta \theta} = \sigma_{\cancel{\theta}
+\cancel{\theta}} = \dfrac{P R}{2 t}}\\
+\\
+
+\dfrac{\sigma_{r r}}{\sigma_{\theta \theta}} = \dfrac{P}{\dfrac{P R}{2
+t}} = 2 \dfrac{t}{R} \ll 1 \\
+\end{array}\]</span> Therefore, <span class="math inline">\(\sigma_{r
+r}\)</span> can be neglected in comparison to <span
+class="math inline">\(\sigma_{\theta \theta}\)</span> and<span
+class="math inline">\(\sigma_{\cancel{\theta} \cancel{\theta}}\)</span>
+for thin walled sphere. <span class="math inline">\(\boxed{\sigma_{r r}
+\sim 0}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+    	<p>Footer description.</p>
+	</footer>
+<script>
+    	// Function to open the side menu
+    	function openMenu() {
+        	document.getElementById("sideMenu").style.width = "250px";
+    	}
+
+    	// Function to close the side menu
+    	function closeMenu() {
+        	document.getElementById("sideMenu").style.width = "0";
+    	}
+	</script>
+</body>
+</html>
