@@ -88,6 +88,11 @@
             background-color: #CC1417; /* Lighter Red */
         /*}*/
         /* Side Menu Styles */
+        .btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
         .side-menu {
             height: 100%;
             width: 0;
@@ -118,7 +123,7 @@
         .side-menu .close-btn {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             font-size: 36px;
             color: white;
             cursor: pointer;
@@ -159,8 +164,8 @@
         </div>
     </div> -->
     <!-- Button to open side menu -->
+    <div class = "btn">
     <button class="open-btn" onclick="openMenu()">Menu</button>
-
     <!-- The side menu -->
     <div id="sideMenu" class="side-menu">
         <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
@@ -169,6 +174,7 @@
         <a href="/ENGN1210Website/Files/testtextconvert.html">Text</a>
         <a href="/ENGN1210Website/Files/pdfembed.html">PDF</a>
         <a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
+    </div>
     </div>
 
     <div class="container">
