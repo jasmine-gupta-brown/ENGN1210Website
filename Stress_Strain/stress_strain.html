@@ -1,0 +1,535 @@
+<div class="center">
+<p><span> <strong>Simple Stress, Strain and Linear Elasticity<br />
+</strong></span></p>
+</div>
+<div class="large">
+<div class="flushleft">
+<p><u>Normal and Shear Stresses</u><br />
+Forces can act in any direction on a surface.<br />
+</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(\sigma =
+\dfrac{N}{A}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(\tau  =
+\dfrac{\nu}{A}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="math inline">\(\sigma =
+\dfrac{F cos\theta}{A}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">shear stress = <span
+class="math inline">\(\tau = \dfrac{F sin\theta}{A}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+<u>Example</u>: Stresses on area defined by plane a - b ?<br />
+</p>
+<figure>
+<img src="Figure 4.png" />
+<figcaption>plane a - b</figcaption>
+</figure>
+<p>take a cut at a - b and draw<br />
+</p>
+<figure>
+<img src="Figure 5.png" />
+<figcaption>F.B.D. of the cut at a - b</figcaption>
+</figure>
+<p>For c - s area a b : -<br />
+<span class="math display">\[\begin{array}{ccc}
+\text{Normal Force} \hspace{0.3em} N_{a b} = N sin \theta\\
+\\
+\text{Shear Force} \hspace{0.3em} V_{a b} = N cos \theta\\
+\\
+\text{Area}\hspace{0.5em} a b = A_{a b} = \dfrac{A}{sin \theta}\\
+\\
+\sigma_{a b} = \dfrac{N sin \theta}{ A_{a b} } = \dfrac{N sin
+2\theta}{A}\\
+\\
+\tau_{a b} = \dfrac{N cos\theta}{A_{a b}} = \dfrac{N sin\theta
+cos\theta}{A}
+\end{array}\]</span><br />
+Note : - area A in denominator is deformed area (current area).<br />
+For <u>small strain/small deformation</u><br />
+<span class="math inline">\(A \simeq A_{o} \leftarrow\)</span>
+initial/original/undeformed area<br />
+<u>Normal (axial) and Shear Strains</u><br />
+Considering small strain cases for the time being.<br />
+</p>
+<figure>
+<img src="Figure 6.png" />
+<figcaption>Small strain case</figcaption>
+</figure>
+<p><span class="math display">\[\text{Normal (axial) strain}
+\hspace{0.5em} = \epsilon = \dfrac{\Delta L}{L_{o}}\]</span><br />
+<u>Shear Strain</u> : -<br />
+Let’s consider endothelial cells<br />
+<span class="math inline">\(\uparrow\)</span><br />
+cells lining inside of blood vessels<br />
+</p>
+<figure>
+<img src="Figure 7.png" />
+<figcaption>Blood flow in the vessels lined with endothelial
+cells</figcaption>
+</figure>
+<p>Cells are experiencing shear force hence have shear stress and shear
+strain.<br />
+How to quantify shear strain ?<br />
+Consider example of simple shear<br />
+(endothelial cell example and twisting)<br />
+</p>
+<figure>
+<img src="Figure 8.png" />
+<figcaption>Twisting in the endothelial cell example</figcaption>
+</figure>
+<p><u>Shear strain</u> is change in angle between two perpendicular
+lines in undeformed configuration.<br />
+<span class="math display">\[\text{shear strain} = Y&#39; = \angle B A C
+- \angle B&#39; A&#39; C&#39;\]</span> <span
+class="math inline">\(\ast\)</span> By convention reduction in angle
+corresponds to a positive shear strain.<br />
+</p>
+<hr />
+<p><br />
+<u>Note</u> : - Rigid body motion (translation and rotation) does not
+induce change in length or angle and hence doesn’t contribute to either
+normal or shear strain<br />
+</p>
+<hr />
+<p><br />
+<span class="math display">\[\text{For small strain (shear)}
+\hspace{0.5em} Y = tan Y = \dfrac{\Delta x}{L}\]</span><br />
+<u>Linear Elastic Relation</u><br />
+(Axial)<br />
+</p>
+<figure>
+<img src="Figure 9.png" />
+<figcaption>Continuum elastic body</figcaption>
+</figure>
+<p><u>Hooke’s Law</u> (after Robert Hooke)<br />
+<span class="math display">\[\sigma = E \epsilon\]</span><br />
+where E is elastic modulus (also known as Young’s Modulus)<br />
+[ This is a <u>linear elastic</u> relation true typically for small
+strain <span class="math inline">\(\sim\)</span>0.01 (or upto 0.02)
+]<br />
+<span class="math display">\[\epsilon \lesssim 0.02 \hspace{0.5em} and
+\hspace{0.5em}\text{ Linear Elastic}\]</span><br />
+</p>
+<figure>
+<img src="Figure 10.png" />
+<figcaption>Elastic response of the body</figcaption>
+</figure>
+<div class="center">
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">of following</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">material</td>
+<td style="text-align: center;">Material</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">(elastic modulus)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">- Achilles tendon</td>
+<td style="text-align: center;">Cartilage</td>
+<td style="text-align: center;">0.001 - 0.01</td>
+</tr>
+<tr>
+<td style="text-align: center;">- Steel</td>
+<td style="text-align: center;">Rubber</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr>
+<td style="text-align: center;">- Bone</td>
+<td style="text-align: center;">Ligament</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">- Rubber <span
+class="math inline">\(\longrightarrow\)</span></td>
+<td style="text-align: center;">Glassy Polymer</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">- Cartilage</td>
+<td style="text-align: center;">Wood</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">-Bone Polymer (PC)</td>
+<td style="text-align: center;">Bone</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">- Glassy</td>
+<td style="text-align: center;">Steel</td>
+<td style="text-align: center;">200</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Recall structural <u>Stiffness</u> : -<br />
+</p>
+<figure>
+<img src="Figure 11.png" />
+<figcaption>Stiffness is the slope of change in force and change in
+length</figcaption>
+</figure>
+<p><span class="math display">\[k = \dfrac{\Delta F}{\Delta
+L}\]</span></p>
+<figure>
+<img src="Figure 12.png" />
+<figcaption>Different axial stiffness cases</figcaption>
+</figure>
+<hr />
+<p><br />
+<u>What is the difference between stiffness and elastic modulus
+?</u><br />
+</p>
+<figure>
+<img src="Figure 13.png" />
+<figcaption>Elastic modulus is the slope for stress vs strain
+graph</figcaption>
+</figure>
+<p><span class="math display">\[E = \dfrac{d \sigma}{d
+\epsilon}\]</span><br />
+<span class="math inline">\(\uparrow\)</span><br />
+Elastic Modulus/ Young’s Modulus<br />
+Elastic modulus is a <u>material property</u><br />
+(it doesn’t depend on geometry)<br />
+Consider extension of a bar<br />
+</p>
+<figure>
+<img src="Figure 14.png" />
+<figcaption>Extended Bar</figcaption>
+</figure>
+<p>Linear elastic relation<br />
+<span class="math display">\[\begin{array}{ccc}
+\sigma = E \epsilon\\
+\\
+\Rightarrow \dfrac{F}{A} = E \dfrac{\Delta L}{L_o}\\
+\\
+\Rightarrow \dfrac{F}{\Delta L} = \dfrac{A E}{L_o}\\
+\\
+\text{since stiffness (of structure) is}\hspace{0.5em}
+k_{axial} = \dfrac{F}{\Delta L}\\
+\Rightarrow \text{stiffness} \hspace{1em} k_{axial} = \dfrac{A}{L_o} E\\
+\end{array}\]</span><br />
+where <span class="math inline">\(\dfrac{A}{L_o} \rightarrow\)</span>
+geometry dependent<br />
+E <span class="math inline">\(\rightarrow\)</span> material property
+dependent<br />
+Stiffness of a structure depends on both geometry and material
+property.<br />
+</p>
+<hr />
+<p><br />
+<u>Achilles Tendon Problem</u></p>
+<figure>
+<img src="Figure 15.png" />
+<figcaption>Different forces on the feet</figcaption>
+</figure>
+<figure>
+<img src="Figure 16.png" />
+<figcaption>F.B.D. of feet</figcaption>
+</figure>
+<p>Q: what would be the max tendon elongation?<br />
+Given:<br />
+</p>
+<ul>
+<li><p>Person weight = 75 kg (mass)</p></li>
+<li><p>Slow walking</p></li>
+<li><p>Tendon length <span class="math inline">\(\sim\)</span> 7.5
+cm</p></li>
+<li><p>Tendon diameter <span class="math inline">\(\sim\)</span> 10 mm
+(assumed uniform cylindrical)</p></li>
+</ul>
+<p>Force Balance : - <span class="math display">\[F + N   = R\]</span>
+Moment Balance about B : - <span
+class="math display">\[\begin{array}{ccc}
+F 4  = N 12\\
+\\
+\Rightarrow F = 3 N = 3 W = 3 M g\\
+\end{array}\]</span><br />
+Maximum force case is when weight is supported only on one foot.<br />
+<span class="math display">\[\begin{array}{ccc}
+\Rightarrow F = 9.81 \times 75 \times 3 = 2207.3 N\\
+\\
+\text{stress in tendon (axial)} \hspace{0.5em}\sigma = \dfrac{F}{A} =
+\dfrac{F}{\pi \dfrac{d^2}{4}} = \dfrac{2207.3 [ N ]}{ 78.5 [ mm^2] }\\
+\\
+\hspace{5em} = 28.1 MPa\\
+\\
+\text{strain} \hspace{0.5em} = \dfrac{\sigma}{E} = \dfrac{28.1 [ MPa ]}{
+1000 [ MPa ] }\\
+\\
+\hspace{3em} \approx 0.028 \\
+\\
+\hspace{5.5em} = 2.8 \% \hspace{0.3em} \text{strain}
+\end{array}\]</span><br />
+<span class="math inline">\(\therefore\)</span> Elongation in
+tendon<br />
+<span class="math display">\[\begin{array}{ccc}
+\Rightarrow \Delta L = L E\\
+\\
+\hspace{3em} = 7.5 [cm] \times 0.028\\
+\\
+\hspace{3em} \Rightarrow \Delta L = 0.21\text{ cm }\\
+\end{array}\]</span><br />
+Typically walking load on achilles tendon<br />
+<span class="math inline">\(\simeq\)</span> 3.5 to 4<br />
+<span class="math inline">\(\times\)</span> body weight<br />
+for running <span class="math inline">\(\simeq\)</span> 7 to 8 times
+body weight<br />
+<u>Simple Composite Structures</u><span
+class="math inline">\(\rightarrow\)</span><br />
+e.g. consider composite consisting of tissue/cartilage with bone
+prosthesis with bone mechanical biomedical devices<br />
+<u>Consider Series</u><span
+class="math inline">\(\rightarrow\)</span><br />
+</p>
+<figure>
+<img src="Figure 17.png" />
+<figcaption>2 materials in series</figcaption>
+</figure>
+<p>In Y-Direction<br />
+<span class="math inline">\(\sigma, \epsilon\)</span> are total geo.
+stress and strain<br />
+Materials <span class="math inline">\(\rightarrow\)</span> properly
+glued<br />
+Force <span class="math inline">\(\rightarrow\)</span> assumed to get
+uniformly distributed<br />
+Find <span class="math inline">\(\epsilon\)</span> ?<br />
+<span class="math inline">\(E_{eff.} ? =
+\dfrac{\sigma}{\epsilon}\)</span><br />
+</p>
+<ol type="i">
+<li><p><u>Force balance where applicable</u> : -<br />
+Along y - direction : -<br />
+<span class="math display">\[\begin{array}{lll}
+F = F_A = F_B\\
+\hspace{2.5em}\uparrow\\
+\text{y - direction force in A material}\\
+\\
+\Rightarrow \sigma = \sigma_A = \sigma_B = \dfrac{F}{L b}
+\end{array}\]</span></p></li>
+<li><p><u>Geometric (deformation) compatibility</u> : -<br />
+Total extension in 2 direction: -<br />
+<span class="math display">\[\begin{array}{lll}
+\Delta t = \Delta t_A + \Delta t_B\\
+\\
+\epsilon_A = \dfrac{\Delta t_A}{t_A}; \hspace{0.5em} \epsilon_B =
+\dfrac{\Delta t_B}{t_B}\\
+\\
+\Rightarrow \epsilon = \dfrac{\Delta t}{t_A + t_B} = \dfrac{\Delta t_A +
+\Delta t_B}{t_A + t_B}
+\end{array}\]</span></p></li>
+<li><p><u>Constitutive Relation</u> : -<br />
+<span class="math display">\[\begin{array}{lll}
+\sigma_A = E_A \epsilon_A; \hspace{0.5em}\sigma_B = E_B \epsilon_B\\
+\\
+\therefore \hspace{0.3em} \Delta t_A = \epsilon_A t_A
+=   \dfrac{\sigma_A}{E_A} t_A = \dfrac{F}{E_A L b} t_A\\
+\\
+\text{similarly} \hspace{0.5em} \Delta t_B = \dfrac{F}{E_B L b} t_B\\
+\\
+\Rightarrow \epsilon = \dfrac{\Delta t_A + \Delta t_B}{t_A + t_B} \\
+\hspace{1.2em}\uparrow    \\
+\text{strain along y in the composite}\\
+\\
+\Rightarrow \epsilon = \underbrace{\dfrac{F}{L b}}\hspace{0.5em}
+\underbrace{\dfrac{t_A / E_A + t_B / E_B}{ t_A  + t_B }}\\
+\hspace{3.6em} \downarrow \hspace{4.5em}\downarrow\\
+\hspace{3.5em} \sigma \hspace{4.5em} E_{eff}\\
+\\
+\end{array}\]</span><br />
+</p></li>
+</ol>
+<p>In conventional send for the composite stiffness in y
+-direction<br />
+<span class="math display">\[\begin{array}{lll}
+\Rightarrow k = \dfrac{F}{\Delta t} = \dfrac{F}{\Delta t_A + \Delta
+t_B}\\
+\\
+\Rightarrow k = \dfrac{\cancel {F}}{\dfrac{\cancel{F}}{L b} \left(
+\dfrac{t_A}{E_A} + \dfrac{t_B}{E_B}
+\right)}\\
+\\
+k = \dfrac{L b}{\left(
+\dfrac{t_A}{E_A} + \dfrac{t_B}{E_B}
+\right)}
+\end{array}\]</span><br />
+<u>Consider materials glued in parallel</u><br />
+</p>
+<figure>
+<img src="Figure 18.png" />
+<figcaption>2 materials in parallel</figcaption>
+</figure>
+<ol type="i">
+<li><p><u>Force balance where applicable</u> : -<br />
+<span class="math display">\[\begin{array}{lll}
+F = F_A + F_B = \sigma_A b t_A + \sigma_B  b t_B\\
+\\
+\text{also}\hspace{0.5em} \sigma = \dfrac{F}{b ( t_A + t_B ) }
+\end{array}\]</span><br />
+</p></li>
+<li><p><u>Geometric (deformation) compatibility</u> : -<br />
+<span class="math display">\[\begin{array}{lll}
+\Delta l = \Delta l_A = \Delta l_B\\
+\\
+\Rightarrow \epsilon_A = \epsilon_B = \epsilon = \Delta l_A / l = \Delta
+l_B / l = \Delta l /l
+\end{array}\]</span><br />
+</p></li>
+<li><p><u>Constitutive Model Equations</u> : -<br />
+<span class="math display">\[\begin{array}{lll}
+\sigma_A = E_A \epsilon_A \\
+\sigma_B = E_B \epsilon_B\\
+\\
+\sigma = \dfrac{F}{b ( t_A + t_B )} = \dfrac{\cancel {b} (\sigma_A t_A +
+\sigma_B t_B ) }{\cancel {b} ( t_A + t_B )}\\
+\\
+\Rightarrow \sigma = \dfrac{E_A \epsilon_A t_A + E_B \epsilon_B t_B
+}{t_A + t_B} =\epsilon \hspace{0.3em}
+\underbrace{\left(
+\dfrac{E_A t_A + E_B t_B}{t_A + t_B}
+\right)}\\
+\hspace{16.5em}\downarrow\\
+\hspace{16em} E_{eff}\\
+\end{array}\]</span><br />
+</p></li>
+</ol>
+<p><u>Elastic Energy Storage</u><br />
+Ex. Elastic energy storage in your tendon can contribute up to 35% of
+your energy need when running<br />
+Theory : - Energy stored = Work done (Elastic bodies)<br />
+(Total)<br />
+</p>
+<figure>
+<img src="Figure 19.png" />
+<figcaption>A stretched body</figcaption>
+</figure>
+<p><span class="math display">\[\begin{array}{lll}
+d U = F d L = d W \\
+\\
+\Rightarrow U = \int \limits_{L_o}^L F d L\\
+\\
+\hspace{2em}\because \hspace{0.5em} d \epsilon = \dfrac{ d L}{L},\\
+\\
+\hspace{4em} \text{and} \hspace{0.3em} F = \sigma A,\\
+\\
+\Rightarrow U = \int \limits_{0}^{\epsilon} \sigma A L d \epsilon\\
+\\
+\Rightarrow U = A L \int \limits_0^{\epsilon} \sigma d \epsilon \\
+\\
+\Rightarrow \boxed{ u = \dfrac{U}{A L} = \int \limits_0^{\epsilon}
+\sigma d \epsilon}\\
+\hspace{1.7em}\uparrow\\
+\text{energy stored \underline{per unit volume} (energy density)}\\
+\\
+\text{For linear elastic materials}\hspace{0.3em} \sigma = E \epsilon\\
+\\
+\Rightarrow \boxed{u = \int \limits_0^{\epsilon} E \epsilon d \epsilon =
+\dfrac{1}{2} E \epsilon^2 = \dfrac{1}{2} \sigma \epsilon =
+\dfrac{\sigma^2}{2 E}}
+\end{array}\]</span><br />
+<u>Poisson’s Ratio</u><br />
+Even when we are talking about simple axial problems,the geometry is 3D
+and strain is occurring in other directions.<br />
+Consider simple tension case<br />
+</p>
+<figure>
+<img src="Figure 20.png" />
+<figcaption>A fixed body under tension</figcaption>
+</figure>
+<p>Poisson’s ration <span class="math inline">\(\upsilon\)</span> is
+measure of change in lateral direction due to axially applied
+load.<br />
+strain <span class="math inline">\(\perp\)</span> to 1 direction<br />
+<span class="math inline">\(\swarrow\)</span><br />
+<span class="math display">\[\boxed{\upsilon
+\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny
+def}}}{=}}\dfrac{- \Delta \omega/ \omega} {\Delta L / L}}\]</span><br />
+<span class="math inline">\(\nwarrow\)</span><br />
+strain in 1 direction<br />
+<span class="math inline">\(\upsilon \simeq 0.5\)</span> for
+in-compressible materials<br />
+<span class="math inline">\(0 &lt; \upsilon &lt; \dfrac{1}{2}\)</span>
+(conventional materials)<br />
+<u>Hooke’s Law for Shear</u> : -<br />
+</p>
+<figure>
+<img src="Figure 21.png" />
+<figcaption>A body under shear stress</figcaption>
+</figure>
+<p><span class="math display">\[\begin{array}{ccc}
+\boxed{\tau = G Y}\\
+\\
+\text{Generally for 3D consideration} \hspace{0.3em} \boxed{ \tau_{x y}
+= G Y_{x y}}\\
+\hspace{18em}\uparrow\\
+\hspace{17em}\text{change in angle (engineering shear strain)}\\
+\\
+Y_{x y} \approx tan Y_{x y} = \dfrac{\Delta L}{L}\\
+\\
+Y \leftarrow \text{small value (small strain)}\\
+\\
+\hspace{3em}\boxed{ \epsilon_{x y}
+\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny
+def}}}{=}}\dfrac{Y_{x y}}{2}}\\
+\uparrow\\
+\text{tensoral}\\
+\\
+\text{Note : - }\hspace{0.5em} \boxed{ \tau_{i j} = \tau _{j i}}
+\end{array}\]</span></p>
+<figure>
+<img src="Figure 22.png" />
+<figcaption>Cartesian system </figcaption>
+</figure>
+<p><span class="math display">\[\begin{array}{ccc}
+\Rightarrow  \text{similarly} \hspace{0.5em}\boxed{\begin{matrix}
+\tau_{x y} = 2 G \epsilon_{x y}\\
+\tau_{y z} = 2 G \epsilon_{y z}\\
+\tau_{x z} = 2 G \epsilon_{x z}\\
+\end{matrix}}\\
+\\
+\text{ G : - Shear Modulus }\\
+\text{and} \hspace{0.3em} \boxed{ G = \dfrac{E}{2 ( 1 + \upsilon )}}
+
+\end{array}\]</span></p>
+</div>
+</div>
