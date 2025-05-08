@@ -100,25 +100,6 @@
             background-color: #CC1417;
         } 
 
-        /* new for calculator */
-        label, input {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    button {
-      padding: 10px;
-      width: 100%;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    .result {
-      margin-top: 20px;
-      font-weight: bold;
-    }
     </style>
 </head>
 <body>
@@ -183,35 +164,6 @@
             document.getElementById("sideMenu").style.width = "0";
         }
     </script>
-
-    <div class="container">
-    <h2>Linear Stress Calculator</h2>
-    <label for="force">Force (N):</label>
-    <input type="number" id="force" placeholder="Enter force in newtons" />
-
-    <label for="area">Cross-sectional Area (m²):</label>
-    <input type="number" id="area" placeholder="Enter area in square meters" />
-
-    <button onclick="calculateStress()">Calculate Stress</button>
-
-    <div class="result" id="result"></div>
-  </div>
-
-  <script>
-    function calculateStress() {
-      const force = parseFloat(document.getElementById('force').value);
-      const area = parseFloat(document.getElementById('area').value);
-      const resultDiv = document.getElementById('result');
-
-      if (!force || !area || area === 0) {
-        resultDiv.textContent = "Please enter valid numbers. Area must not be zero.";
-        return;
-      }
-
-      const stress = force / area; // Stress in Pascals (Pa)
-      resultDiv.textContent = `Linear Stress: ${stress.toFixed(2)} Pa`;
-    }
-  </script>
 
 </body>
 </html>
