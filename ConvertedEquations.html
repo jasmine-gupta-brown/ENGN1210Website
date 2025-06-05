@@ -1,0 +1,785 @@
+<h1 id="statics"><strong>Statics</strong></h1>
+<p>Vectors are shown in <strong>bold</strong>.</p>
+<ol type="i">
+<li><p><strong>Force, Position and Moment Vectors in a Continuum
+Body</strong><br />
+In a cartesian coordinate system with origin <span
+class="math inline">\(O\)</span> and unit vectors {<span
+class="math inline">\(\bm{\hat{e}}_x, \bm{\hat{e}}_y,
+\bm{\hat{e}}_z\)</span>} <span class="math display">\[\begin{aligned}
+\textrm{Position vector of a point P:} \quad \textbf{r} &amp;=
+r_x\,\bm{\hat{e}}_x +r_y\,\bm{\hat{e}}_y +r_z\,\bm{\hat{e}}_z\\
+\textrm{A force (vector) acting on P:} \quad \textbf{F} &amp;=
+F_x\,\bm{\hat{e}}_x +F_y\,\bm{\hat{e}}_y +F_z\,\bm{\hat{e}}_z\\
+\textrm{Moment due to force } \textbf{F} \textrm{ about O:} \quad
+\textbf{M}_O = \textbf{r}\times\textbf{F} &amp;=
+{M_O}_x\,\bm{\hat{e}}_x+{M_O}_y\,\bm{\hat{e}}_y+{M_O}_z\,\bm{\hat{e}}_z
+\end{aligned}\]</span> The magnitude of the moment about an axis due to
+a force is given by <em>the force magnitude</em> <span
+class="math inline">\(\times\)</span> <em>minimum distance between the
+axis and the force vector line</em> (perpedicular distance).</p></li>
+<li><p><strong>General Equilibrium Equations</strong><br />
+If multiple forces and moments act on a body represented by <span
+class="math inline">\(i = 1,2,3\)</span>...<br />
+Vector Form: <span class="math display">\[\sum_{i=1}^{n}
+\textbf{F}^{(i)}=\textbf{0}\]</span> <span
+class="math display">\[\sum_{i=1}^{p}
+{\textbf{M}_O}^{(i)}=\textbf{0}\]</span> Scalar Form: <span
+class="math display">\[\sum_{i=1}^{n}   F_x^{(i)}=0, \quad
+\sum_{i=1}^{n}  \;F_y^{(i)}=0, \quad
+\sum_{i=1}^{n}  F_z^{(i)}=0\]</span> <span
+class="math display">\[\sum_{i=1}^{p}
+{M_O}_x^{(i)}=0,\quad\sum_{i=1}^{p} {M_O}_y^{(i)}=0,\quad \sum_{i=1}^{p}
+{M_O}_z^{(i)}=0\]</span></p></li>
+<li><p><strong>Centroid</strong> <span
+class="math display">\[\tilde{X}=\frac{\int \;xdv}{\int \; dv},\quad
+\tilde{Y}=\frac{\int \;ydv}{\int \; dv}, \quad \tilde{Z}=\frac{\int
+\;zdv}{\int \; dv}\]</span></p></li>
+<li><p><strong>Center of Gravity</strong><br />
+Discrete Bodies System (each body is represented by subscript <span
+class="math inline">\(i\)</span>, where <span class="math inline">\(i =
+1,2,3,\)</span>...): <span
+class="math display">\[\bar{X}=\frac{\sum\limits_{i}  x_i\,
+w_i}{\sum\limits_{i} w_i},\quad \bar{Y}=\frac{\sum\limits_{i} y_i \,
+w_i}{\sum\limits_{i} w_i},\quad \bar{Z}=\frac{\sum\limits_{i} z_i\,
+w_i}{\sum\limits_{i} w_i}\]</span> Continuum Body: <span
+class="math display">\[\bar{X}=\frac{\int \;xdw}{\int \; dw},\quad
+\bar{Y}=\frac{\int \;ydw}{\int \; dw},\quad \bar{Z}=\frac{\int
+\;zdw}{\int \; dw}, \quad \textrm{where} \quad dw=\rho
+dV\]</span></p></li>
+<li><p><strong>Dry Friction</strong><br />
+<span class="math display">\[\textrm{Static: } \; F_f \leqslant \; \mu_s
+\, N, \qquad \textrm{Dynamic: } F_f = \; \mu_k \, N\]</span></p></li>
+<li><p><strong>Gravitational Acceleration:</strong> <span
+class="math inline">\(g=9.8\; m/s^2\)</span></p></li>
+</ol>
+<h1 id="simple1d-small-strain-stress-and-hookes-law"><strong>Simple/1D
+Small Strain, Stress, and Hooke’s Law</strong></h1>
+<p>Consider simple (uniaxial) tension/compression (stress is applied in
+the axial direction, and there are no stresses in transverse
+(perpendicular to axial) directions). For shear, consider a force
+parallel to the surface. <span class="math inline">\(A_0, L_0,
+w_0\)</span> are the original (relaxed) cross-sectional area, axial
+length (along loading direction), and width in the transverse direction,
+respectively. <span class="math inline">\(A, \Delta L, \Delta w\)</span>
+are the deformed (loaded) body cross-sectional area, change in axial
+length, and change in transverse width, respectively.<br />
+</p>
+<p><strong>Stress and Strain:</strong> <span
+class="math display">\[\textrm{Stress} \quad \sigma = \frac{F}{A}
+\approx \frac{F}{A_0} , \qquad \textrm{Normal strain} \quad \epsilon
+=\frac{\mathop{}\!\mathbin\bigtriangleup L}{L_0}\]</span></p>
+<p>shear strain = change in angle of perpendicular lines = <span
+class="math inline">\(\gamma \; (\approx \tan \, \gamma)\)</span><br />
+<strong>Linear Elasticity:</strong> In the elastic limit (before
+material yield occurs).</p>
+<ol type="i">
+<li><p><strong>Hooke’s Law</strong> <span
+class="math display">\[\begin{aligned}
+\textrm{Normal stress-strain relation:} \quad \sigma &amp;= E \,
+\epsilon, \quad \textrm{(where $E$ is Elastic/Young&#39;s Modulus)} \\
+\textrm{Shear stress-strain relation:} \quad \tau &amp;= G \,\gamma \;
+(\textrm{OR} \; \sigma_{ij} = G \,\gamma_{ij}, \; \textrm{when } i\neq
+j) \quad \textrm{($G$ is Shear Modulus)}
+\end{aligned}\]</span> Note: Tensorial strain <span
+class="math inline">\(\epsilon_{ij} =
+\frac{1}{2}\gamma_{ij}\)</span></p></li>
+<li><p><strong>Poisson’s Ratio</strong> <span
+class="math display">\[\nu=-\frac{\textrm{transverse strain}}{\textrm{
+axial strain}}=-\frac{\mathop{}\!\mathbin\bigtriangleup
+w/w_0}{\mathop{}\!\mathbin\bigtriangleup L/L_0}\]</span> Note: for
+incompressible materials (no volume change under deformation), <span
+class="math inline">\(\nu = \frac{1}{2}\)</span></p></li>
+<li><p><strong>Strain Energy Density (Energy per Unit Volume)</strong>
+<span class="math display">\[\begin{aligned}
+\textrm{Strain energy density (General): } \quad \mathcal{U} &amp;=\int
+\sigma\,d\epsilon\\
+\textrm{For \emph{linear elastic material}, $\mathcal{U}$ is
+\emph{elastic energy density stored}:} \quad \mathcal{U} &amp;=
+\dfrac{1}{2}E\epsilon^2 = \dfrac{1}{2}\sigma \epsilon =
+\dfrac{\sigma^2}{2E}\\
+\textrm{Total energy stored for the entire volume:} \quad \mathbb{U}
+&amp;= \int_V \; \mathcal{U}\, dV
+\end{aligned}\]</span></p>
+<p>Note: In (i, ii, iii), strain <span
+class="math inline">\(\epsilon\)</span> is <em>elastic strain</em> for
+the recoverable stored elastic energy (in the elastic limit, total
+strain is elastic strain).</p></li>
+</ol>
+<h1 id="d-small-strain-plasticity"><strong>1D Small Strain
+Plasticity</strong></h1>
+<p>For a case when the applied uniaxial stress <span
+class="math inline">\(\sigma\)</span> is higher than the tensile yield
+strength (<span class="math inline">\(\sigma_Y\)</span>) of the material
+<span class="math inline">\((\sigma &gt; \sigma_Y\)</span>), then <span
+class="math display">\[\begin{aligned}
+\epsilon &amp;= \epsilon^e + \epsilon^p; \quad \textrm{and}\\
+\sigma &amp;= E\, \epsilon^e \quad \textrm{(Hooke&#39;s Law)}
+\end{aligned}\]</span> where <span
+class="math inline">\(\epsilon\)</span> is the total strain, <span
+class="math inline">\(\epsilon^e\)</span> and <span
+class="math inline">\(\epsilon^p\)</span> are elastic and plastic
+strains, respectively. Hooke’s Law is for Linear Elastic Materials and
+relates elastic strain to stress.<br />
+Under elastic-plastic deformation, <span
+class="math display">\[\begin{aligned}
+\textrm{Total work done per unit volume is} \quad \mathcal{W} &amp;=
+\int_{0}^{\epsilon} \sigma\,d\epsilon\\
+\textrm{Elastic energy stored per unit volume is}  \quad \mathcal{U}
+&amp;=  \dfrac{1}{2}\sigma \epsilon^e
+\end{aligned}\]</span></p>
+<h1 id="torsion"><strong>Torsion</strong></h1>
+<ol type="i">
+<li><p><strong>Torsion of Cylindrical Elastic Bars</strong><br />
+Consider cylindrical coordinate system with position coordinates <span
+class="math inline">\((r,\theta, z)\)</span> and basis vectors <span
+class="math inline">\(\{\bm{\hat{e}}_r, \bm{\hat{e}}_{\theta},
+\bm{\hat{e}}_z \}\)</span> for a hollow cylindrical bar that has inner
+radius <span class="math inline">\(R_i\)</span>, outer radius <span
+class="math inline">\(R_o\)</span>, length <span
+class="math inline">\(L\)</span>, and shear modulus <span
+class="math inline">\(G\)</span>. Consider <span
+class="math inline">\(\alpha = \frac{d\phi}{dz}\)</span> as
+rotation/twist per unit length and angle in <em>radians</em>. <span
+class="math display">\[\begin{aligned}
+\textrm{Total Twist} \quad \Phi &amp;= \int_0^L \alpha \, dz \\
+\textrm{For uniform geometry and material across length } \Phi &amp;=
+\alpha\, L \\
+\textrm{Shear Stress  } \quad \tau &amp;= \sigma_{\theta z} =
+G\,\gamma_{\theta z} = G\,\alpha\, r = \dfrac{T\,r}{J}\\
+\textrm{Torsional Moment/Torque  } \quad T &amp;= GJ\alpha =
+GJ\frac{\Phi}{L}\\
+J \textrm{ is polar moment of inertia with}  \quad J &amp;=\iint_A
+r^2\,dA =\frac{\pi (R_o^4-R_i^4)}{2} \;\;
+\end{aligned}\]</span></p></li>
+</ol>
+<h1 id="thin-wall-pressurized-cylinders-and-spheres"><strong>Thin Wall
+Pressurized Cylinders and Spheres</strong></h1>
+<p>Consider an internal pressure <span
+class="math inline">\(P_i\)</span> which is greater than the outer
+pressure <span class="math inline">\(P_o\)</span> acting on a
+thin-walled hollow structure with thickness <span
+class="math inline">\(t &lt;&lt; R \; \text{(radius)}\)</span>. Let us
+represent the difference between internal pressure (<span
+class="math inline">\(P_i\)</span>) and outer pressure (<span
+class="math inline">\(P_o\)</span>) as net pressure <span
+class="math inline">\(P\)</span> so <span class="math inline">\(P = P_i
+- P_o\)</span> (In the case when outer/external pressure is zero, then
+<span class="math inline">\(P=P_i\)</span>).</p>
+<ol type="i">
+<li><p><strong>Thin Wall Cylinder</strong><br />
+Consider a cylindrical coordinate system with position coordinates <span
+class="math inline">\((r,\theta, z)\)</span> and coordinate system basis
+<span class="math inline">\(\{\bm{\hat{e}}_r, \bm{\hat{e}}_{\theta},
+\bm{\hat{e}}_z \}\)</span> for a hollow cylinder that experiences net
+internal pressure, then <span class="math display">\[\begin{aligned}
+\sigma_{\theta\theta} &amp;= \dfrac{P\,R}{t}\\
+\sigma_{rr} &amp;= 0 \qquad \qquad \qquad \quad (\textrm{note: }
+\sigma_{rr} \sim P &lt;&lt; \sigma_{\theta\theta} \implies \sigma_{rr}
+\approx 0),  \quad \textrm{and}
+\end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+\begin{cases}
+\sigma_{zz} &amp;= \dfrac{P\,R}{2 t} \qquad \qquad \text{(if the axial
+ends are closed/capped)  \quad    OR}\\
+\sigma_{zz} &amp;= 0 \qquad \qquad \quad \;\; \text{(if the axial ends
+are open) }
+\end{cases}
+\end{aligned}\]</span></p>
+<p>The <em>material volume</em> approximation for a thin-walled hollow
+cylinder with length <span class="math inline">\(L\)</span> is <span
+class="math inline">\(V = 2 \pi R \, t \, L\)</span>.<br />
+{<em>Note:</em> Volume of material <span class="math inline">\(V = \pi
+(R_o^2 - R_i^2) \,L = \pi (R_o+R_i)(R_o-R_i)\, L.  \\
+R_o - R_i = t\)</span>, and for a thin wall case, <span
+class="math inline">\(R_o+R_i \approx 2R \implies V \approx 2 \pi R \, t
+\, L\)</span>}</p></li>
+<li><p><strong>Thin Wall Sphere</strong><br />
+Consider a spherical coordinate system with position coordinates <span
+class="math inline">\((r,\theta, \phi)\)</span> and coordinate system
+basis <span class="math inline">\(\{\bm{\hat{e}}_r,
+\bm{\hat{e}}_{\theta}, \bm{\hat{e}}_{\phi} \}\)</span> for a hollow
+sphere that experiences net internal pressure, then <span
+class="math display">\[\begin{aligned}
+\sigma_{\theta\theta} = \sigma_{\phi\phi}  &amp;= \dfrac{P\,R}{2 t} \\
+\sigma_{rr} &amp;= 0 \qquad \qquad (\textrm{note: } \sigma_{rr} \sim P
+&lt;&lt; \sigma_{\theta\theta} \implies \sigma_{rr} \approx 0)
+\end{aligned}\]</span></p>
+<p>The <em>material volume</em> approximation for a thin-walled sphere
+is <span class="math inline">\(V = 4 \pi R^2 \, t\)</span>.<br />
+{<em>Note:</em> Volume of material <span class="math inline">\(V =
+\frac{4}{3} \pi (R_o^3 - R_i^3)  =  \frac{4}{3} \pi
+(R_o^2+R_i^2+R_oR_i)(R_o-R_i)\)</span><br />
+with <span class="math inline">\(R_o - R_i = t\)</span>, and for a thin
+wall case, <span class="math inline">\(R_o \approx R_i \approx
+R\)</span>, leads to <span class="math inline">\(V \approx 4 \pi R^2 \,
+t\)</span>}</p></li>
+</ol>
+<h1 id="beam-bending"><strong>Beam Bending</strong></h1>
+<p><span class="roman">For a beam bending in the x-y plane, with x-axis
+along the neutral axis. At any given axial location <span
+class="math inline">\(x\)</span> in the bent, slender beam:</span><br />
+<br />
+<strong>General relations:</strong></p>
+<ol>
+<li><p>Geometry relation <span class="math display">\[\epsilon_{xx} =
+-\kappa y = -\frac{y}{\rho}\]</span> Where <span
+class="math inline">\(y\)</span> is the distance from the neutral axis,
+<span class="math inline">\(\kappa\)</span> is the curvature of the
+local point, and <span class="math inline">\(\rho\)</span> is the radius
+of curvature for the neutral axis.</p></li>
+<li><p>Moment balance <span class="math display">\[M = -\iint_A y \,
+\sigma_{xx} \,dA\]</span></p></li>
+<li><p>Given <span class="math inline">\(v\)</span> as deflection of the
+beam (at the neutral axis) in the transverse direction. <span
+class="math display">\[\textrm{curvature:  } \kappa = \frac{d^2 v}{d
+x^2},\qquad \textrm{slope:  }\theta = \frac{dv}{dx}\]</span></p></li>
+</ol>
+<p><strong>For linear elastic materials:</strong></p>
+<ol>
+<li><p>Moment-curvature relation <span class="math display">\[M =
+\frac{EI}{\rho} = EI\kappa\]</span></p></li>
+<li><p>Axial stress and moment relation <span
+class="math display">\[\sigma_{xx} = -\frac{My}{I}\]</span></p></li>
+<li><p>Governing equation for deflection <span
+class="math inline">\(v\)</span> of a beam <span
+class="math display">\[\dfrac{d^2 v}{dx^2} = \dfrac{M}{E
+I}\]</span></p></li>
+<li><p>Second moment of inertia for common beam cross-sections:<br />
+For a beam with rectangular cross-section where the beam thickness is h
+(in the plane of bending) and width is b (width in z-direction if
+bending is in x-y plane), <span class="math display">\[I = \frac{1}{12}
+bh^3\]</span> For a cylindrical beam with cross-sectional outside radius
+<span class="math inline">\(R_o\)</span> and internal radius <span
+class="math inline">\(R_i\)</span>, <span class="math display">\[I =
+\frac{\pi}{4} (R_o^4-R_i^4)\]</span></p>
+<figure>
+<img src="SomeBeamBC.png" />
+<figcaption>Examples of end conditions and corresponding boundary
+conditions (B.C.). <span class="math inline">\(V\)</span> is the shear
+force:</figcaption>
+</figure></li>
+</ol>
+<h1 id="stress-general3d-at-a-point"><strong>Stress (General/3D) at a
+Point</strong></h1>
+<p>For an orthogonal coordinate basis <span
+class="math inline">\(\bm{\hat{e}}_i\)</span></p>
+<ol type="i">
+<li><p><strong>Traction Vector (on a surface that is defined by its unit
+normal vector <span
+class="math inline">\(\bm{\hat{n}}\)</span></strong>): <span
+class="math display">\[\textbf{t}(\bm{\hat{n}})=\lim_{\mathop{}\!\mathbin\bigtriangleup
+A\to
+0}\frac{\mathop{}\!\mathbin\bigtriangleup\textbf{f}}{\mathop{}\!\mathbin\bigtriangleup\textbf{A}}\]</span></p></li>
+<li><p><strong>Stress Tensor</strong>: <span
+class="math display">\[\sigma_{ij}=\bm{\hat{e}}_i \cdot
+\textbf{t}(\bm{\hat{e}}_j)\]</span></p></li>
+<li><p><strong>Traction Vector from Stress Tensor</strong>: <span
+class="math display">\[\textbf{t}(\bm{\hat{n}}) = \bm{\sigma}
+\,\bm{\hat{n}}\]</span></p></li>
+<li><p><strong>Hydrostatic/Mechanical Pressure</strong>: <span
+class="math display">\[\quad p = -\dfrac{1}{3}\, tr\,
+\bm{\sigma}\]</span></p></li>
+<li><p><strong>Principal Stresses and Principal Directions</strong></p>
+<ul>
+<li><p>Principal stresses acting on a material point are the eigenvalues
+of the stress tensor at that material point. The directions of these
+principal stresses are given by the eigenvectors corresponding to each
+eigenvalue.</p></li>
+<li><p>Maximum <em>tensile stress</em> at a material point is the
+maximum principal stress (when positive) at that material
+point.</p></li>
+</ul></li>
+<li><p><strong>Equations of Motion/Cauchy Momentum Equations<br />
+(In the Cartesian Coordinate System)</strong></p>
+<p><span class="math display">\[\frac{\partial \sigma_{xx}}{\partial x}
++ \frac{\partial \sigma_{xy}}{\partial y} + \frac{\partial
+\sigma_{xz}}{\partial z} + b_x = \rho\frac{\partial^2 u_x}{\partial
+t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{xy}}{\partial x} + \frac{\partial \sigma_{yy}}{\partial y} +
+\frac{\partial \sigma_{yz}}{\partial z} + b_y = \rho\frac{\partial^2
+u_y}{\partial t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{xz}}{\partial x} + \frac{\partial \sigma_{yz}}{\partial y} +
+\frac{\partial \sigma_{zz}}{\partial z} + b_z = \rho\frac{\partial^2
+u_z}{\partial t^2}\]</span> (Equilibrium equations are obtained when
+there is no acceleration <span
+class="math inline">\({\ddot{\textbf{u}}}={\textbf{0}}\)</span>. The
+body is static.)</p></li>
+</ol>
+<h1 id="second-order-tensor"><strong>Second Order Tensor</strong></h1>
+<p>For a second order tensor, in index notation, subscripts i and j
+represent values as either {1,2,3} or {x,y, z} in the cartesian
+coordinate system, represent {r, <span
+class="math inline">\(\theta\)</span>, z} in the cylindrical coordinate
+system, and {r, <span class="math inline">\(\theta, \phi\)</span>} in
+the spherical coordinate system. With <span
+class="math inline">\(\bm{A}\)</span> as a second order (3x3) tensor (it
+can represent a stress or a strain tensor),</p>
+<ol type="i">
+<li><p><strong>Transpose of a Tensor</strong>: <span
+class="math inline">\(\bm{A}^T\)</span> <span
+class="math display">\[[{A}_{ij}]^T = [{A}_{ji}]\]</span></p></li>
+<li><p><strong>Trace of a Tensor</strong>: <span
+class="math display">\[tr\, \textbf{A} = A_{xx} +
+A_{yy}+A_{zz}\]</span></p></li>
+<li><p><strong>Deviatoric Part or Deviator of a Tensor</strong>: <span
+class="math display">\[dev \, \textbf{A} = \textbf{A}_0 = \textbf{A} -
+\dfrac{1}{3}\, (tr \textbf{A})\, \bm{1}\]</span></p></li>
+<li><p><strong>Determinant of a Tensor</strong>:<br />
+det<span class="math inline">\(\textbf{A}\)</span> is determinant of
+<span class="math inline">\(\textbf{A}\)</span> matrix.<br />
+<br />
+Determinant of a <span class="math inline">\(3\times 3\)</span> matrix:
+<span class="math display">\[det
+\begin{bmatrix}
+A_{xx} &amp; A_{xy} &amp; A_{xz}\\
+A_{yx} &amp; A_{yy} &amp; A_{yz}\\
+A_{zx} &amp; A_{zy} &amp; A_{zz}
+\end{bmatrix}
+=A_{xx}\,(A_{yy}\,A_{zz} - A_{yz}\,A_{zy}) -A_{xy}\, (A_{yx}\,A_{zz} -
+A_{yz}\,A_{zx}) +A_{xz}\, (A_{yx}\,A_{zy}-A_{yy}\,A_{zx})\]</span>
+Determinant of a <span class="math inline">\(2\times 2\)</span>
+matrix:<br />
+<span class="math inline">\(det
+\begin{bmatrix}
+A_{xx} &amp; A_{xy} \\
+A_{yx} &amp; A_{yy} \\
+\end{bmatrix}
+=A_{xx}A_{yy}-A_{xy}A_{yx}\\
+\)</span></p></li>
+<li><p><strong>Eigen Values (Principal Values) and Eigen Directions
+(Principal Directions)</strong><br />
+Eigen/Principal values are solution <span
+class="math inline">\(\omega_i\)</span>’s of the equation: <span
+class="math display">\[det[\bm{A}-\omega\,\bm{1}]=0 \qquad
+\textrm{(where $\bm{1}$ is the identity tensor)}\]</span> <span
+class="math display">\[\implies det
+\begin{bmatrix}
+A_{xx}-\omega &amp; A_{xy} &amp; A_{xz}\\
+A_{xy} &amp; A_{yy}-\omega &amp;A_{yz}\\
+A_{xz} &amp; A_{yz} &amp; A_{zz}-\omega
+\end{bmatrix}
+= 0\]</span> Note that for stress and strain, the highest eigenvalue
+when positive is the <em>maximum tensile stress/strain</em> acting at
+that material point.<br />
+If <span class="math inline">\(\bm{\hat{m}}\)</span> is the eigenvector
+(Principal direction) corresponding to an eigenvalue (Principal value)
+<span class="math inline">\(\omega_i\)</span>, then: <span
+class="math display">\[[\bm{A}-\omega_i\,\bm{1}]\,\{\bm{\hat{m}}\}=\{\textbf{0}\}\]</span>
+<span class="math display">\[\begin{bmatrix}
+A_{xx}-\omega_i &amp; A_{xy} &amp; A_{xz}\\
+A_{xy} &amp; A_{yy}-\omega_i &amp;A_{yz}\\
+A_{xz} &amp; A_{yz} &amp; A_{zz}-\omega_i
+\end{bmatrix}
+\begin{bmatrix}
+m_x\\
+m_y\\
+m_z
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix}\]</span> <span class="math display">\[\textrm{where }
+\quad m_x^2 + m_y^2 + m_z^2 = 1 \quad \textrm{since } \bm{\hat{m}}
+\textrm{ is a unit vector.}\]</span></p></li>
+</ol>
+<h1 id="coordinate-transformation"><strong>Coordinate
+Transformation</strong></h1>
+<p><strong>3D Transformation (General):</strong> Given a second order
+tensor <span class="math inline">\(\bm{A}\)</span> or a vector <span
+class="math inline">\(\bm{v}\)</span> in coordinate system <span
+class="math inline">\(\{\bm{e}_x, \bm{e}_y, \bm{e}_z\}\)</span>. If
+<span class="math inline">\(\bm{A}\)</span> or <span
+class="math inline">\(\bm{v}\)</span> transform to become <span
+class="math inline">\(\bm{A}^*\)</span> &amp; <span
+class="math inline">\(\bm{v}^*\)</span> for a different rotated
+coordinate system <span class="math inline">\(\{\bm{e}^*_x, \bm{e}^*_y,
+\bm{e}^*_z\}\)</span> then we can use the following relations to obtain
+components of the transformed tensor: <span
+class="math display">\[\begin{aligned}
+{{[\bm{A}^*]}_{}}_{3\text{x}3} &amp;= {{[\bm{Q}]}_{}}_{3\text{x}3}  \;
+{{[\bm{A}]}_{}}_{3\text{x}3}  \; {{[\bm{Q}^T]}_{}}_{3\text{x}3} \\
+{{[\bm{v}^*]}_{}}_{3\text{x}1} &amp;= {{[\bm{Q}]}_{}}_{3\text{x}3}  \;
+{{[\bm{v}]}_{}}_{3\text{x}1}
+\end{aligned}\]</span> where the individual components of the rotation
+tensor <span class="math inline">\(\bm{Q}\)</span> are obtained from
+<span class="math display">\[Q_{ij} = \bm{e}^*_i \cdot \bm{e}_j\]</span>
+<strong>2D Transformation - Rotation in x-y plane (e.g., Plane Stress,
+Plane Strain):</strong> <span class="math display">\[\begin{aligned}
+A^*_{xx} &amp;= \dfrac{1}{2}\,(A_{xx} + A_{yy}) +  \dfrac{1}{2}\,(A_{xx}
+- A_{yy})\, \cos 2\theta + A_{xy}\,\sin 2\theta,\\
+A^*_{yy} &amp;= \dfrac{1}{2}\,(A_{xx} + A_{yy}) -  \dfrac{1}{2}\,(A_{xx}
+- A_{yy})\, \cos 2\theta - A_{xy}\,\sin 2\theta,\\
+A^*_{xy} &amp;= -  \dfrac{1}{2}\,(A_{xx} - A_{yy})\, \sin 2\theta +
+A_{xy}\,\cos2\theta
+\end{aligned}\]</span></p>
+<h1 id="small-strain-general3d-at-a-point"><strong>Small Strain
+(General/3D) at a Point</strong></h1>
+<ol>
+<li><p><strong>Displacement</strong><br />
+If <span class="math inline">\(\bm{u} \; (= u_x\, \bm{\hat{e}}_x + u_y\,
+\bm{\hat{e}}_y +  u_z\, \bm{\hat{e}}_z\)</span>) is the displacement
+vector of a material point due to deformation,</p></li>
+<li><p><strong>Normal Strains (In the Cartesian Coordinate
+System)</strong> <span class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \frac{\partial u_x}{\partial x} \\
+\epsilon_{yy} &amp;= \frac{\partial u_y}{\partial y} \\
+\epsilon_{zz} &amp;= \frac{\partial u_z}{\partial z}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Shear Strains (In the Cartesian Coordinate
+System)</strong> <span class="math display">\[\begin{aligned}
+\epsilon_{xy} &amp;= \epsilon_{yx} = \dfrac{1}{2}\,\Big(\frac{\partial
+u_x}{\partial y} + \frac{\partial u_y}{\partial x}\Big) = \dfrac{1}{2}\,
+\gamma_{xy}\\
+\epsilon_{yz} &amp;= \epsilon_{zy} = \dfrac{1}{2}\,\Big(\frac{\partial
+u_y}{\partial z} + \frac{\partial u_z}{\partial y}\Big) = \dfrac{1}{2}\,
+\gamma_{yz}\\
+\epsilon_{xz} &amp;= \epsilon_{zx} = \dfrac{1}{2}\,\Big(\frac{\partial
+u_x}{\partial z} + \frac{\partial u_z}{\partial x}\Big) = \dfrac{1}{2}\,
+\gamma_{xz}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Volumetric Strain</strong> <span
+class="math display">\[\epsilon_V = \frac{V-V_0}{V_0} \approx tr
+\bm{\epsilon} = \epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}\]</span></p></li>
+<li><p><strong>Strain Gauge Rosettes for Planar 2D Strain
+Measurements</strong>:<br />
+Consider that a strain gauge is identified with number classifier <span
+class="math inline">\(\beta\)</span> where angle <span
+class="math inline">\(\theta_{\beta}\)</span> is strain gauge’s
+orientation with respect to the <span
+class="math inline">\(x\)</span>-axis. If the strain gauge measures
+strain value <span class="math inline">\(\epsilon^*_{\beta}\)</span>
+along its longitudinal direction, we have <span
+class="math display">\[\begin{aligned}
+\epsilon^*_{\beta} &amp;= \dfrac{1}{2}\,(\epsilon_{xx} + \epsilon_{yy})
++  \dfrac{1}{2}\,(\epsilon_{xx} - \epsilon_{yy})\, \cos 2\theta_{\beta}
++ \epsilon_{xy}\,\sin 2\theta_{\beta}
+\end{aligned}\]</span> If there are three strain gauges in a Rosette,
+then these strain gauges are identified as <span
+class="math inline">\(\beta = 1,2\)</span> and <span
+class="math inline">\(3\)</span>. In a plane (2D), one will need three
+strain gauge measurements (<span class="math inline">\(\epsilon^*_1,
+\epsilon^*_2, \epsilon^*_3\)</span>) to obtain the three unknown strains
+<span class="math inline">\(\epsilon_{xx}, \epsilon_{yy},
+\epsilon_{xy}\)</span> and fully define strain at a point.</p></li>
+</ol>
+<h1
+id="linear-elastic-stress-strain-relations-hookes-law-in-3d"><strong>Linear
+Elastic Stress-Strain Relations (Hooke’s Law) in 3D</strong></h1>
+<ol>
+<li><p><strong>Stress-Strain Relations for Isotropic
+Materials</strong><br />
+Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \frac{1}{E} \,[\sigma_{xx} - \nu(\sigma_{yy} +
+\sigma_{zz})]\\
+\epsilon_{yy} &amp;= \frac{1}{E} \,[\sigma_{yy} - \nu(\sigma_{xx} +
+\sigma_{zz})]\\
+\epsilon_{zz} &amp;= \frac{1}{E} \,[\sigma_{zz} - \nu(\sigma_{yy} +
+\sigma_{xx})]\\
+\epsilon_{xy} &amp;= \frac{1}{2G} \,\sigma_{xy} = \epsilon_{yx}\\
+\epsilon_{yz} &amp;= \frac{1}{2G} \,\sigma_{yz} = \epsilon_{zy}\\
+\epsilon_{xz} &amp;= \frac{1}{2G} \,\sigma_{xz} = \epsilon_{zx}
+\end{aligned}\]</span></p>
+<p>Stress from strains: <span class="math display">\[\begin{aligned}
+\sigma_{xx} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{xx}\\
+\sigma_{yy} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{yy}\\
+\sigma_{zz} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{zz}\\
+\sigma_{xy} &amp;= 2G\epsilon_{xy}\\
+\sigma_{yz} &amp;= 2G\epsilon_{yz}\\
+\sigma_{xz} &amp;= 2G\epsilon_{xz}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Stress-Strain Relations for Transversely Isotropic
+Materials</strong><br />
+If the material is transversely isotropic in the <span
+class="math inline">\(x-y\)</span> plane, <span
+class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \dfrac{1}{E} \,\sigma_{xx} - \dfrac{\nu}{E}
+\,\sigma_{yy} - \dfrac{\nu&#39;}{E&#39;} \sigma_{zz}\\
+\epsilon_{yy} &amp;= \dfrac{1}{E} \,\sigma_{yy} - \dfrac{\nu}{E}
+\,\sigma_{xx} - \dfrac{\nu&#39;}{E&#39;} \sigma_{zz}\\
+\epsilon_{zz} &amp;= \dfrac{1}{E&#39;} \,\sigma_{zz} -
+\dfrac{\nu&#39;}{E} \,\sigma_{xx} - \dfrac{\nu&#39;}{E} \sigma_{yy}\\
+\epsilon_{xy} &amp;= \frac{1}{2G} \,\sigma_{xy} = \epsilon_{yx}\\
+\epsilon_{yz} &amp;= \frac{1}{2G&#39;} \,\sigma_{yz} = \epsilon_{zy}\\
+\epsilon_{xz} &amp;= \frac{1}{2G&#39;} \,\sigma_{xz} = \epsilon_{zx}
+\end{aligned}\]</span></p></li>
+</ol>
+<h1
+id="selected-useful-relations-between-elastic-constants-for-linear-isotropic-materials"><strong>Selected
+Useful Relations between Elastic Constants<br />
+for Linear Isotropic Materials</strong></h1>
+<p>With <span class="math inline">\(E\)</span> as the Elastic/Young’s
+modulus and <span class="math inline">\(\nu\)</span> as the Poison’s
+ratio,</p>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span
+class="math inline">\(G=\dfrac{E}{2(1+\nu)}\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(K=\dfrac{E}{3(1-2\nu)}\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(\lambda=\dfrac{E\nu}{(1+\nu)(1-2\nu)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<p>where the Shear modulus <span class="math inline">\(G\)</span> is
+defined by: <span class="math inline">\(\quad \sigma_{xy} = G\,
+\gamma_{xy} = 2G\, \epsilon_{xy},\)</span><br />
+<br />
+and the Bulk modulus <span class="math inline">\(K\)</span> is defined
+by: <span class="math inline">\(K = -\dfrac{p}{\epsilon_V} =
+-\dfrac{p}{\frac{\triangle V}{V_0}}\quad\)</span>, where <span
+class="math inline">\(p\)</span> is mechanical/hydrostatic
+pressure.<br />
+<span class="math inline">\(\lambda \;\)</span> is Lameś constant.</p>
+<h1 id="slender-column-buckling"><strong>Slender Column
+Buckling</strong></h1>
+<p>Euler’s equation for slender column buckling: <span
+class="math display">\[F_{crit} = \frac{\pi^2 EI}{c^2 L^2}\]</span> Here
+<span class="math inline">\(F_{crit}\)</span> is the lowest compressive
+load that can cause buckling, <span class="math inline">\(c\)</span> is
+a buckling factor that depends on the boundary conditions, <span
+class="math inline">\(I\)</span> is the second moment of inertia of the
+beam column, <span class="math inline">\(E\)</span> is Young’s modulus,
+and L is the length of the column.<br />
+Fixed-Free <span class="math inline">\(c=2\)</span>, Pinned-Pinned <span
+class="math inline">\(c=1\)</span>, Fixed-Fixed <span
+class="math inline">\(c=\frac{1}{2}\)</span>, Fixed-Pinned <span
+class="math inline">\(c=0.7\)</span>.</p>
+<h1 id="von-mises-yield-criterion"><strong>von Mises Yield
+Criterion</strong></h1>
+<p>At a material point, the elastic constitutive equation fails to hold
+when a yield condition is met. One of the prominent yield condition used
+is the Mises (named after von Mises) yield condition: <span
+class="math display">\[\text{Yield occurs/starts at a material point
+when }\quad \bar{\sigma} = \sigma_Y\]</span> <span
+class="math display">\[\textrm{where,}\qquad \quad \bar{\sigma} =
++\,\sqrt{\; \frac{1}{2}\Big\{(\sigma_{xx} - \sigma_{yy})^2 +
+(\sigma_{yy} - \sigma_{zz})^2 + (\sigma_{xx} - \sigma_{zz})^2\Big\} \; +
+\;3(\sigma_{xy}^2 + \sigma_{yz}^2 + \sigma_{xz}^2) \; }\]</span> is the
+equivalent Mises stress, and <span
+class="math inline">\(\sigma_Y\)</span> is the <em>tensile yield
+strength</em> (material property) of the material.</p>
+<h1 id="fracture"><strong>Fracture</strong></h1>
+<p>Applied stress intensity factor (Mode I): <span
+class="math display">\[K = \sigma^\infty Q \sqrt{\pi a}\]</span> where
+<span class="math inline">\(\sigma^\infty\)</span> is the far field
+stress (external stress), <span class="math inline">\(Q\)</span> is the
+geometry and load factor, <span class="math inline">\(a\)</span> is the
+characteristic crack length.<br />
+The criterion for fracture initiation or crack extension to not occur in
+response to slowly applied loading of monotonically increasing magnitude
+is taken as <span class="math inline">\(K &lt; K_C\)</span>, where <span
+class="math inline">\(K_C\)</span> is the material and thickness
+dependent critical value of K and is called the <em>fracture
+toughness</em>.<br />
+The brittle fracture happens when: <span class="math inline">\(K \ge
+K_C\)</span><br />
+(Note: <em>Plane strain fracture toughness <span
+class="math inline">\({K_I}_c\)</span></em> is a material property. It
+is a conservative method of defining fracture toughness, and <span
+class="math inline">\({K_I}_c\)</span> is independent of thickness.)</p>
+<h1 id="fatigue"><strong>Fatigue</strong></h1>
+<ol>
+<li><p>S-N Curve Method:<br />
+The fatigue failure criteria for cyclic loading from multiple stress
+levels using Miner’s Rule is <span class="math display">\[\sum_i
+\frac{N_i}{{N_f}_i} = 1\]</span> Where <span
+class="math inline">\(N_i\)</span> is the number of cycles that have
+already been run for the i<span class="math inline">\(^{th}\)</span>
+stress magnitude, and <span class="math inline">\({N_f}_i\)</span> is
+the number of cycles to failure corresponding to the i<span
+class="math inline">\(^{th}\)</span> stress amplitude.<br />
+</p></li>
+<li><p>Paris’ Law: <span class="math display">\[\frac{da}{dN} =
+C\triangle K^m\]</span><br />
+Integration of the Paris equation gives: <span
+class="math display">\[\begin{aligned}
+    N_f &amp;= \frac{1}{C\,(\triangle \sigma \,Q \sqrt{\pi})^m} \,
+\frac{1}{(1-\frac{m}{2})}\, \Big\{a_f^{1-\frac{m}{2}} -
+a_i^{1-\frac{m}{2}}\Big\} \quad \text{ for  } m \ne 2\\
+    &amp;= \frac{1}{C\,(\triangle \sigma \,Q \sqrt{\pi})^2} \, \Big\{
+\ln (\dfrac{a_f}{a_i}) \Big\} \qquad \quad \text{when  } m = 2,
+    
+\end{aligned}\]</span> Where <span class="math inline">\(N_f\)</span> is
+the number of cycles for a crack to grow from initial length <span
+class="math inline">\(a_i\)</span> to a final length <span
+class="math inline">\(a_f\)</span>. In the equation, C and m are
+material properties, Q is the geometry and load factor, and <span
+class="math inline">\(\triangle \sigma\)</span> is the magnitude of
+stress variation in one cycle.</p></li>
+</ol>
+<h1 id="linear-viscoelasticity"><strong>Linear
+Viscoelasticity</strong></h1>
+<ol>
+<li><p>To model a material’s time/rate-dependent response, a
+viscoelastic material model has at least one or more springs (elastic
+response representation) and at least one or more dashpots (viscous
+response representation). The numbers and arrangements of the springs
+and dashpots will govern the viscoelastic model’s behavior.</p></li>
+<li><p>In linear viscoelasticity, both the elastic and viscous responses
+are assumed to be linear. The principle of superposition can be applied
+(since the model is linear).</p></li>
+<li><p>Individual spring <span class="math inline">\(i\)</span> is
+modeled using Hooke’s elastic solid relation <span
+class="math inline">\(\sigma^{e^{(i)}} = E^{(i)}\,
+\epsilon^{e^{(i)}}\)</span>. Where <span
+class="math inline">\(\sigma^{e^{(i)}}, \epsilon^{e^{(i)}}\)</span> are
+stress and strain acting on spring <span
+class="math inline">\(i\)</span>, and <span
+class="math inline">\(E^{(i)}\)</span> is the elastic modulus of the
+spring <span class="math inline">\(i\)</span>.</p></li>
+<li><p>Individual dashpot <span class="math inline">\(i\)</span> is
+modeled using Newtonian fluid model <span
+class="math inline">\(\sigma^{v^{(i)}} = \eta^{(i)} \,
+\dot{\epsilon}^{v^{(i)}}\)</span>. Where <span
+class="math inline">\(\sigma^{v^{(i)}} ,
+\dot{\epsilon}^{v^{(i)}}\)</span> are stress and strain-rate acting on
+the dashpot <span class="math inline">\(i\)</span>, and <span
+class="math inline">\(\eta^{(i)}\)</span> is the viscosity of the
+dashpot <span class="math inline">\(i.\)</span> Here <span
+class="math inline">\(\dot{()}\)</span> represents the time
+derivative.</p></li>
+<li><p>A viscoelastic constitutive material model is a relationship
+between {<span class="math inline">\(\sigma, \epsilon, \dot{\sigma},
+\dot{\epsilon}\)</span>} (all or some of these) in terms of model
+parameters <span class="math inline">\(\eta\)</span>’s and <span
+class="math inline">\(E\)</span>’s. Where <span
+class="math inline">\(\sigma\)</span> and <span
+class="math inline">\(\epsilon\)</span> are the overall stress and
+strain in the viscoelastic material.<br />
+For example, for a Maxwell Model where a spring and a dashpot are in
+series, the relationship is <span
+class="math display">\[\dfrac{\dot{\sigma}}{E} + \dfrac{\sigma}{\eta} =
+\dot{\epsilon}\]</span></p></li>
+<li><p><strong>Oscillatory Rheology:</strong><br />
+Provides frequency (and/or temperature) dependent measurements of <span
+class="math inline">\(G&#39;, G&#39;&#39;\)</span> and <span
+class="math inline">\(\tan\delta\)</span> as viscoelastic material
+property parameters. <span class="math inline">\(G&#39;\)</span> is the
+<em>Storage Modulus</em>, <span
+class="math inline">\(G&#39;&#39;\)</span> is the <em>Loss Modulus</em>,
+and <span class="math inline">\(\tan\delta \; \Big( = \dfrac{G&#39;&#39;
+}{G&#39;}\Big)\)</span> is the <em>Loss Tangent</em>. <span
+class="math inline">\(\tan\delta\)</span> represents mechanical
+damping.</p></li>
+<li><p><strong>Time-Temperature Superposition (TTS):</strong> TTS is a
+principle used in linear viscoelasticity to predict the behavior of
+materials under different time and temperature conditions. It relies on
+the assumption that the effect of temperature on a viscoelastic
+material’s behavior can be represented as a shift in time (a higher
+temperature can accelerate the time effect). Temperature shift factor
+<span class="math inline">\(a_T(T)\)</span> is used to create a master
+curve. The shift factor can be obtained using Arrhenius or WLF
+(Williams-Landel-Ferry) models.</p></li>
+<li><p><strong>Integral Method:</strong><br />
+The application of the Boltzmann Superposition Principle gives integral
+relations.<br />
+<strong>Stress response for a given strain history <span
+class="math inline">\(\epsilon(t)\)</span></strong>: <span
+class="math display">\[\sigma(t) = E_r(t)\,\epsilon_0 + \int_0^t
+E_r(t-\tau) \; \dot{\epsilon}(\tau) \, d\tau,\]</span> where <span
+class="math inline">\(E_r(t)\)</span> is the time-dependent stress
+relaxation Elastic Modulus.<br />
+<strong>Strain response for a given stress history <span
+class="math inline">\(\sigma(t)\)</span></strong>: <span
+class="math display">\[\epsilon(t) = J_c(t)\, \sigma_0 + \int_0^t
+J_c(t-\tau) \; \dot{\sigma}(\tau) \, d\tau,\]</span> where <span
+class="math inline">\(J_c(t)\)</span> is the time-dependent creep
+response Compliance Modulus.</p></li>
+</ol>
+<h1 id="large-deformation-stress-and-strain"><strong>Large Deformation
+Stress and Strain</strong></h1>
+<ol type="i">
+<li><p><strong>1D Stress and Strain</strong><br />
+Consider uniaxial tension or compression with <span
+class="math inline">\(L_0, A_0\)</span> as the original axial length and
+cross-sectional area, respectively, and <span class="math inline">\(L,
+A\)</span> as the deformed axial length and cross-sectional area. When
+strains are large (strains much <em>greater</em> than a few percent):
+(i) the change in deformed geometry cannot be ignored and needs to be
+accounted for, and (ii) the material response (relationship between
+stress and strain) typically becomes nonlinear. <span
+class="math display">\[\begin{aligned}
+\textbf{Engineering/Nominal Strain and Stress:}&amp; \quad
+\epsilon_{eng} =\frac{\mathop{}\!\mathbin\bigtriangleup L}{L_0}, \quad
+\sigma_{eng} = \frac{F}{A_0}\\
+\textbf{Stretch Ratio:}&amp; \quad \lambda =\frac{L}{L_0} =
+\frac{L_0+\mathop{}\!\mathbin\bigtriangleup L}{L_0} = 1 +
+\epsilon_{eng}\\
+\textrm{True Strain:}&amp; \quad \epsilon =\ln (1+\epsilon_{eng}) =
+\ln(\lambda) \\\\
+\textbf{True Stress:}&amp; \quad \sigma =\frac{F}{A}\\
+\textrm{True Stress:}&amp; \quad \sigma = \lambda\; \sigma_{eng}
+\end{aligned}\]</span></p></li>
+<li><p><strong>3D Nonlinear Elastic (Hyperelastic) Modeling</strong></p>
+<ul>
+<li><p><strong>Kinematics:</strong> Displacement Gradient <span
+class="math inline">\(\textbf{H}\)</span>: <span
+class="math inline">\(H_{ij} = \dfrac{\partial u_i}{\partial
+X_j}\)</span> (<span class="math inline">\(\textbf{u}\)</span> is
+displacement vector)<br />
+Deformation Gradient <span class="math inline">\(\textbf{F} = \textbf{H
++ 1}\)</span>. In principal coordinate frame <span
+class="math inline">\([\textbf{F}] = \begin{bmatrix}
+    \lambda_1 &amp; 0 &amp; 0 \\
+    0 &amp; \lambda_2 &amp; 0  \\    
+    0 &amp; 0&amp; \lambda_3  
+\end{bmatrix}\)</span>.</p></li>
+<li><p><strong>Strain Measures:</strong> Strain measures are
+mathematical constructs to measure normalized deformations. There are
+many accepted strain measures. All strain measures are functions of
+<span class="math inline">\((\textbf{F}^T \textbf{F})\)</span>.<br />
+One common (basic) strain measure is Green Strain <span
+class="math inline">\(\textbf{E}\)</span>, where <span
+class="math display">\[\textbf{E} = \dfrac{1}{2}(\textbf{F}^T \textbf{F}
+- \textbf{1}) = \dfrac{1}{2}(\textbf{H}+\textbf{H}^T+\textbf{H}^T
+\textbf{H})\]</span> For small strains, <span
+class="math inline">\(\textbf{H}^T \textbf{H}\)</span> can be neglected.
+Green Strain <em>for small strains</em>: <span
+class="math display">\[\textbf{E} \equiv \bm{\epsilon} =
+\dfrac{1}{2}(\textbf{H}+\textbf{H}^T)\]</span></p></li>
+<li><p><strong>Constitutive Model:</strong> Defined as free energy
+density function<br />
+<span class="math inline">\(\psi
+=\hat{\psi}(\lambda_1,\lambda_2,\lambda_3, \textrm{model
+parameters})\)</span>, where <span class="math inline">\(\lambda_1,
+\lambda_2,\lambda_3\)</span> are principal stretches.<br />
+</p></li>
+<li><p><strong>Neo-Hookean Model</strong> (a simple nonlinear model):
+<span class="math inline">\(\psi = C_1(\lambda_1^2 + \lambda_2^2 +
+\lambda_3^2 -3 )\)</span><br />
+<br />
+where <span class="math inline">\(C_1\)</span> is the material model
+parameter.<br />
+Note: Ground state shear modulus <span class="math inline">\(G\)</span>
+(initial shear modulus) <span class="math inline">\(\approx
+\frac{C_1}{2}\)</span>.<br />
+</p></li>
+<li><p><strong>Stresses</strong> (for isotropic, incompressible elastic
+materials):<br />
+<span class="math inline">\(\sigma_1 = \lambda_1 \, \dfrac{\partial
+\psi}{\partial \lambda_1} -P^*; \qquad \sigma_2 = \lambda_2 \,
+\dfrac{\partial \psi}{\partial \lambda_2} -P^*; \qquad \sigma_3 =
+\lambda_3 \, \dfrac{\partial \psi}{\partial \lambda_3}
+-P^*,\)</span><br />
+where <span class="math inline">\(\sigma_1, \sigma_2, \sigma_3\)</span>
+are principal stresses, and <span class="math inline">\(P^*\)</span> is
+an unknown pressure-like variable (also known as a Lagrange multiplier)
+to be obtained by the boundary conditions of the problem.<br />
+Note: Volume ratio <span class="math inline">\(\dfrac{V}{V_0} = det \,
+\textbf{F} = \lambda_1 \lambda_2 \lambda_3 = 1\)</span> for
+incompressible materials.<br />
+</p></li>
+</ul></li>
+</ol>

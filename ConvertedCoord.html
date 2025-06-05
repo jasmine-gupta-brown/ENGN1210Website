@@ -1,0 +1,322 @@
+<h1 id="equations-in-tensor-and-vector-notation">Equations in Tensor and
+Vector Notation</h1>
+<ol>
+<li><p><strong>Displacement Vector</strong>: <span
+class="math display">\[\textbf{u} = \textbf{x} - \textbf{X}\]</span>
+Where <strong>x</strong> and <strong>X</strong> are the position vectors
+for a material point in the current/deformed configuration and
+reference/undeformed configuration respectively.</p></li>
+<li><p><strong>Strain-displacement relation</strong>: <span
+class="math display">\[\bm{\epsilon} = \frac{1}{2} [\bm{\nabla} \bm{u} +
+\bm{\nabla} \bm{u^T}],\qquad \bm{\epsilon} = \bm{\epsilon}^T,\qquad
+|\bm{\nabla} \textbf{u}|&lt;&lt;1\]</span> Where <span
+class="math inline">\(\bm{\nabla}\)</span> is the gradient
+operator.</p></li>
+<li><p><strong>Stress-strain relation</strong>:<br />
+Generalized Hooke’s Law <span class="math display">\[\bm{\epsilon} =
+\frac{1}{E}\; [(1+\nu) \bm{\sigma} - \nu \; (tr\bm{\sigma})\,
+\bm{1}]\]</span> Lamé Equation <span class="math display">\[\bm{\sigma}
+= \lambda \; tr[\bm{\epsilon}] \, \bm{1} + 2 G
+\,\bm{\epsilon}\]</span></p></li>
+</ol>
+<h1 id="equations-in-cartesian-coordinate-system">Equations in Cartesian
+Coordinate System</h1>
+<p>Coordinates: <span class="math display">\[(x,y,z)\]</span> Basis
+Orthonormal Vectors: <span class="math display">\[\{\bm{e_x}, \bm{e_y},
+\bm{e_z}\}\]</span></p>
+<figure>
+<img src="cartesian.png" />
+<figcaption>Figure 1. Rectangular cartesian coordinate
+system</figcaption>
+</figure>
+<ol>
+<li><p><strong>Displacement</strong> <span
+class="math display">\[\textbf{u} = \textbf{x} - \textbf{X}\]</span>
+<span class="math display">\[u_x = \textbf{u} \cdot \bm{e_x}, \qquad u_y
+= \textbf{u} \cdot \bm{e_y}, \qquad u_z = \textbf{u} \cdot
+\bm{e_z}\]</span> <span class="math display">\[\textbf{u} = \sum_i u_i
+\bm{e_i} = u_x \bm{e_x} + u_y \bm{e_y} + u_z \bm{e_z}\]</span></p></li>
+<li><p><strong>Strain-displacement relations</strong> <span
+class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \frac{\partial u_x}{\partial x}\\
+\epsilon_{yy} &amp;= \frac{\partial u_y}{\partial y}\\\epsilon_{zz}
+&amp;= \frac{\partial u_z}{\partial z}\\
+\epsilon_{xy} &amp;= \frac{1}{2} \, \Big(\frac{\partial u_x}{\partial y}
++ \frac{\partial u_y}{\partial x}\Big) = \epsilon_{yx}\\
+\epsilon_{yz} &amp;= \frac{1}{2}\, \Big (\frac{\partial u_y}{\partial z}
++ \frac{\partial u_z}{\partial y}\Big) = \epsilon_{zy}\\
+\epsilon_{xz} &amp;= \frac{1}{2} \, \Big(\frac{\partial u_x}{\partial z}
++ \frac{\partial u_z}{\partial x}\Big) = \epsilon_{zx}\\
+\end{aligned}\]</span></p></li>
+<li><p><strong>Stress-strain relations for isotropic
+materials</strong><br />
+Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \frac{1}{E} \,[\sigma_{xx} - \nu(\sigma_{yy} +
+\sigma_{zz})]\\
+\epsilon_{yy} &amp;= \frac{1}{E} \,[\sigma_{yy} - \nu(\sigma_{xx} +
+\sigma_{zz})]\\
+\epsilon_{zz} &amp;= \frac{1}{E} \,[\sigma_{zz} - \nu(\sigma_{yy} +
+\sigma_{xx})]\\
+\epsilon_{xy} &amp;= \frac{1}{2G} \,\sigma_{xy} = \epsilon_{yx}\\
+\epsilon_{yz} &amp;= \frac{1}{2G} \,\sigma_{yz} = \epsilon_{zy}\\
+\epsilon_{xz} &amp;= \frac{1}{2G} \,\sigma_{xz} = \epsilon_{zx}
+\end{aligned}\]</span> Stress from strains: <span
+class="math display">\[\begin{aligned}
+\sigma_{xx} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{xx}\\
+\sigma_{yy} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{yy}\\
+\sigma_{zz} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{zz}\\
+\sigma_{xy} &amp;= 2G\epsilon_{xy}\\
+\sigma_{yz} &amp;= 2G\epsilon_{yz}\\
+\sigma_{xz} &amp;= 2G\epsilon_{xz}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Equations of motion/Cauchy momentum equations
+(Equilibrium equations)</strong><br />
+<span class="math display">\[\frac{\partial \sigma_{xx}}{\partial x} +
+\frac{\partial \sigma_{xy}}{\partial y} + \frac{\partial
+\sigma_{xz}}{\partial z} + b_x = \rho\frac{\partial^2 u_x}{\partial
+t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{xy}}{\partial x} + \frac{\partial \sigma_{yy}}{\partial y} +
+\frac{\partial \sigma_{yz}}{\partial z} + b_y = \rho\frac{\partial^2
+u_y}{\partial t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{xz}}{\partial x} + \frac{\partial \sigma_{yz}}{\partial y} +
+\frac{\partial \sigma_{zz}}{\partial z} + b_z = \rho\frac{\partial^2
+u_z}{\partial t^2}\]</span></p></li>
+<li><p><strong>Yield condition</strong><br />
+At a material point, the elastic constitutive equation fails to hold
+when a yield condition is met. One of the prominent yield condition used
+is the Mises (named after von Mises) yield condition: <span
+class="math display">\[\text{Yield occurs/starts at a material point
+when }\quad \bar{\sigma} = \sigma_y\]</span> where, <span
+class="math display">\[\bar{\sigma} = \sqrt{\;
+\frac{1}{2}\Big\{(\sigma_{xx} - \sigma_{yy})^2 + (\sigma_{yy} -
+\sigma_{zz})^2 + (\sigma_{xx} - \sigma_{zz})^2\Big\} \; +
+\;3(\sigma_{xy}^2 + \sigma_{yz}^2 + \sigma_{xz}^2) \; }\]</span> is the
+equivalent Mises stress, and <span
+class="math inline">\(\sigma_y\)</span> is the <em>tensile yield
+strength</em> of the material.</p></li>
+</ol>
+<h1 id="equations-in-a-cylindrical-coordinate-system">Equations in a
+Cylindrical Coordinate System</h1>
+<p>Cylindrical coordinates <span class="math inline">\((r,\theta,
+z)\)</span> are related to Cartesian coordinates x, y, by <span
+class="math display">\[r=[x^2 + y^2]^{\frac{1}{2}}, \qquad \theta = \tan
+^{-1}(y/x),\qquad z = z\]</span> <span class="math display">\[x = r \cos
+\theta, \qquad y = r \sin \theta, \qquad z = z\]</span></p>
+<figure>
+<img src="cylindrical.png" />
+<figcaption>Figure 2. Polar cylindrical coordinate system</figcaption>
+</figure>
+<p>Orthonormal basis vectors <span class="math inline">\(\{\bm{e_r} ,
+\bm{e_\theta} , \bm{e_z}\}\)</span> in the cylindrical coordinate system
+are related to cartesian coordinate system by <span
+class="math display">\[\begin{aligned}
+\bm{e_r} &amp;= \cos \theta \bm{e_x} + \sin \theta \bm{e_y}\\
+\bm{e_\theta} &amp;= -\sin \theta \bm{e_x} + \cos \theta \bm{e_y}\\
+\bm{e_z} &amp;= \bm{e_z}
+\end{aligned}\]</span></p>
+<ol>
+<li><p><strong>Displacement</strong> <span
+class="math display">\[\textbf{u} = \textbf{x} - \textbf{X}\]</span>
+<span class="math display">\[u_r = \textbf{u} \cdot \bm{e_r}, \qquad
+u_\theta = \textbf{u} \cdot \bm{e_\theta}, \qquad u_z = \textbf{u} \cdot
+\bm{e_z}\]</span> <span class="math display">\[\textbf{u} = \sum_i u_i
+\bm{e_i} = u_r \bm{e_r} + u_\theta \bm{e_\theta} + u_z
+\bm{e_z}\]</span></p></li>
+<li><p><strong>Strain-displacement relations</strong> <span
+class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{\partial u_r}{\partial r}\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{r} \frac{\partial
+u_\theta}{\partial \theta} + \frac{u_r}{r}\\
+\epsilon_{zz} &amp;= \frac{\partial u_z}{\partial z}\\
+\epsilon_{r\theta} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} -
+\frac{u_\theta}{r}\Big) = \epsilon_{\theta r}\\
+\epsilon_{\theta z} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_z}{\partial \theta} + \frac{\partial u_\theta}{\partial z}\Big) =
+\epsilon_{z\theta}\\
+\epsilon_{rz} &amp;= \frac{1}{2} \, \Big(\frac{\partial u_r}{\partial z}
++ \frac{\partial u_z}{\partial r}\Big) = \epsilon_{zr}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Stress-strain relations for isotropic
+materials</strong><br />
+Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{1}{E}\, [\sigma_{rr} - \nu(\sigma_{\theta
+\theta} + \sigma_{zz})]\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{E}\, [\sigma_{\theta \theta} -
+\nu(\sigma_{rr} + \sigma_{zz})]\\
+\epsilon_{zz} &amp;= \frac{1}{E} \,[\sigma_{zz} - \nu(\sigma_{\theta
+\theta} + \sigma_{rr})]\\
+\epsilon_{r\theta} &amp;= \frac{1}{2G}\, \sigma_{r\theta} =
+\epsilon_{\theta r}\\
+\epsilon_{\theta z} &amp;= \frac{1}{2G} \,\sigma_{\theta z} =
+\epsilon_{z\theta}\\
+\epsilon_{rz} &amp;= \frac{1}{2G} \,\sigma_{rz} = \epsilon_{zr}
+\end{aligned}\]</span> Stress from strains: <span
+class="math display">\[\begin{aligned}
+\sigma_{rr} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta \theta} +
+\epsilon_{zz}) + 2G \epsilon_{rr}\\
+\sigma_{\theta \theta} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta
+\theta} + \epsilon_{zz}) + 2G \epsilon_{\theta \theta}\\
+\sigma_{zz} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta \theta} +
+\epsilon_{zz}) + 2G \epsilon_{zz}\\
+\sigma_{r\theta} &amp;= 2G\epsilon_{r\theta}\\
+\sigma_{\theta z} &amp;= 2G\epsilon_{\theta z}\\
+\sigma_{rz} &amp;= 2G\epsilon_{rz}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Equations of motion/Cauchy momentum equations
+(Equilibrium equations)</strong><br />
+<span class="math display">\[\frac{\partial \sigma_{rr}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{r\theta}}{\partial \theta} +
+\frac{\partial \sigma_{rz}}{\partial z} + \frac{1}{r} (\sigma_{rr} -
+\sigma_{\theta \theta}) + b_r = \rho\frac{\partial^2 u_r}{\partial
+t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{r\theta}}{\partial r} + \frac{1}{r}\frac{\partial \sigma_{\theta
+\theta}}{\partial \theta} + \frac{\partial \sigma_{\theta z}}{\partial
+z} + \frac{2}{r} \sigma_{\theta r} + b_\theta = \rho\frac{\partial^2
+u_\theta}{\partial t^2}\]</span> <span
+class="math display">\[\frac{\partial \sigma_{rz}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{\theta z}}{\partial \theta} +
+\frac{\partial \sigma_{zz}}{\partial z} + \frac{\sigma_{zr}}{r} + b_z =
+\rho\frac{\partial^2 u_z}{\partial t^2}\]</span></p></li>
+<li><p><strong>Yield condition</strong><br />
+<span class="math display">\[\text{Yield occurs/starts at a material
+point when }\quad \bar{\sigma} = \sigma_y\]</span> where, <span
+class="math display">\[\bar{\sigma} = \sqrt{\;
+\frac{1}{2}\Big\{\,(\sigma_{rr} - \sigma_{\theta \theta})^2 +
+(\sigma_{\theta \theta} - \sigma_{zz})^2 + (\sigma_{rr} -
+\sigma_{zz})^2\,\Big\} \;+ \;3(\sigma_{r\theta}^2 + \sigma_{\theta z}^2
++ \sigma_{rz}^2) \; }\]</span> is the equivalent Mises stress, and <span
+class="math inline">\(\sigma_y\)</span> is the tensile yield strength of
+the material.</p></li>
+</ol>
+<h1 id="equations-in-a-spherical-coordinate-system">Equations in a
+spherical coordinate system</h1>
+<p>Spherical coordinates <span class="math inline">\((r,\theta,
+z)\)</span> are related to Cartesian coordinates x, y, by <span
+class="math display">\[r=[x^2 + y^2 + z^2]^{\frac{1}{2}}\]</span> <span
+class="math display">\[\theta = \cos ^{-1}\frac{z}{x^2 + y^2 + z^2},
+\qquad 0 \leq \theta \leq \pi\]</span> <span class="math display">\[\phi
+= \tan^{-1}(y/x),
+\qquad \qquad \quad 0 \leq \phi &lt; 2\pi\]</span> <span
+class="math display">\[x = r \sin \theta \cos \phi, \qquad y = r \sin
+\theta \sin \phi, \qquad z = r \cos \theta\]</span></p>
+<figure>
+<img src="spherical.png" />
+<figcaption>Figure 3. Spherical coordinate system</figcaption>
+</figure>
+<p>Orthonormal basis vectors in the spherical coordinate system and are
+related to cartesian coordinate system by <span
+class="math display">\[\begin{aligned}
+\bm{e_r} &amp;= \sin \theta \cos \phi \bm{e_x} + \cos \theta \sin \phi
+\bm{e_y} + \cos \theta \bm{e_z}\\
+\bm{e_\theta} &amp;= \cos \theta \cos \phi \bm{e_x} + \cos \theta \sin
+\phi \bm{e_y} - \sin \theta \bm{e_z}\\
+\bm{e_\phi} &amp;= -\sin \phi \bm{e_x} + \cos \phi \bm{e_y}
+\end{aligned}\]</span></p>
+<ol>
+<li><p><strong>Displacement</strong> <span
+class="math display">\[\textbf{u} = \textbf{x} - \textbf{X}\]</span>
+<span class="math display">\[u_r = \textbf{u} \cdot \bm{e_r}, \qquad
+u_\theta = \textbf{u} \cdot \bm{e_\theta}, \qquad u_z = \textbf{u} \cdot
+\bm{e_z}\]</span> <span class="math display">\[\textbf{u} = \sum_i u_i
+\bm{e_i} = u_r \bm{e_r} + u_\theta \bm{e_\theta} + u_z
+\bm{e_z}\]</span></p></li>
+<li><p><strong>Strain-displacement relations</strong> <span
+class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{\partial u_r}{\partial r}\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{r} \frac{\partial
+u_\theta}{\partial \theta} + \frac{u_r}{r}\\
+\epsilon_{\phi \phi} &amp;= \frac{1}{r \sin \theta} \frac{\partial
+u_\phi}{\partial \phi} + \frac{\cot \theta}{r} u_\theta +
+\frac{u_r}{r}\\
+\epsilon_{r\theta} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} -
+\frac{u_\theta}{r}\Big) = \epsilon_{\theta r}\\
+\epsilon_{\theta \phi} &amp;= \frac{1}{2} \, \Big(\frac{1}{r\sin
+\theta}\frac{\partial u_\theta}{\partial \phi} +
+\frac{1}{r}\frac{\partial u_\phi}{\partial \theta} - \frac{\cot
+\theta}{r} u_\phi\Big) = \epsilon_{\phi\theta}\\
+\epsilon_{r\phi} &amp;= \frac{1}{2} \, \Big(\frac{\partial
+u_\phi}{\partial r} + \frac{1}{r\sin \theta}\frac{\partial u_r}{\partial
+\phi} - \frac{u_\phi}{r} \Big) = \epsilon_{\phi r}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Stress-strain relations for isotropic
+materials</strong><br />
+Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{1}{E} \,[\sigma_{rr} - \nu(\sigma_{\theta
+\theta} + \sigma_{\phi \phi})]\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{E}\, [\sigma_{\theta \theta} -
+\nu(\sigma_{rr} + \sigma_{\phi \phi})]\\
+\epsilon_{\phi \phi} &amp;= \frac{1}{E} \,[\sigma_{\phi \phi} -
+\nu(\sigma_{\theta \theta} + \sigma_{rr})]\\
+\epsilon_{r\theta} &amp;= \frac{1}{2G} \,\sigma_{r\theta} =
+\epsilon_{\theta r}\\
+\epsilon_{\theta \phi} &amp;= \frac{1}{2G} \,\sigma_{\theta \phi} =
+\epsilon_{\phi \theta}\\
+\epsilon_{r\phi} &amp;= \frac{1}{2G} \,\sigma_{r\phi} = \epsilon_{\phi
+r}
+\end{aligned}\]</span> Stress from strains: <span
+class="math display">\[\begin{aligned}
+\sigma_{rr} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta \theta} +
+\epsilon_{\phi \phi}) + 2G \epsilon_{rr}\\
+\sigma_{\theta \theta} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta
+\theta} + \epsilon_{\phi \phi}) + 2G \epsilon_{\theta \theta}\\
+\sigma_{\phi \phi} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta
+\theta} + \epsilon_{\phi \phi}) + 2G \epsilon_{\phi \phi}\\
+\sigma_{r\theta} &amp;= 2G\epsilon_{r\theta}\\
+\sigma_{\theta \phi} &amp;= 2G\epsilon_{\theta \phi}\\
+\sigma_{r\phi} &amp;= 2G\epsilon_{r\phi}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Equations of motion/Cauchy momentum equations
+(Equilibrium equations)</strong><br />
+<span class="math display">\[\frac{\partial \sigma_{rr}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{r\theta}}{\partial \theta} +
+\frac{1}{r\sin \theta}\frac{\partial \sigma_{r\phi}}{\partial \phi} +
+\frac{1}{r} (2\sigma_{rr} - \sigma_{\theta \theta} - \sigma_{\phi\phi} +
+\cot \theta \; \sigma_{r\theta}) + b_r = \rho\frac{\partial^2
+u_r}{\partial t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{r\theta}}{\partial r} + \frac{1}{r}\frac{\partial \sigma_{\theta
+\theta}}{\partial \theta} + \frac{1}{r\sin \theta}\frac{\partial
+\sigma_{\theta \phi}}{\partial \phi} + \frac{1}{r}[ 3 \sigma_{\theta r}
++ \cot \theta (\sigma_{\theta \theta} - \sigma_{\phi\phi})] + b_\theta =
+\rho\frac{\partial^2 u_\theta}{\partial t^2}\]</span> <span
+class="math display">\[\frac{\partial \sigma_{r\phi}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{\theta \phi}}{\partial \theta} +
+\frac{1}{r\sin \theta} \frac{\partial \sigma_{\phi \phi}}{\partial
+\phi}+ \frac{1}{r} (3 \sigma_{\phi r} + 2 \cot \theta \; \sigma_{\phi
+\theta}) + b_\phi = \rho\frac{\partial^2 u_\phi}{\partial
+t^2}\]</span></p></li>
+<li><p><strong>Yield condition</strong><br />
+<span class="math display">\[\text{Yield occurs/starts at a material
+point when }\quad \bar{\sigma} = \sigma_y\]</span> where, <span
+class="math display">\[\bar{\sigma} = \sqrt{\;
+\frac{1}{2}\{\,(\sigma_{rr} - \sigma_{\theta \theta})^2 +
+(\sigma_{\theta \theta} - \sigma_{\phi\phi})^2 + (\sigma_{rr} -
+\sigma_{\phi\phi})^2\,\}+ 3(\sigma_{r\theta}^2 \;+\; \sigma_{\theta
+\phi}^2 + \sigma_{r\phi}^2) \; }\]</span> is the equivalent Mises
+stress, and <span class="math inline">\(\sigma_y\)</span> is the tensile
+yield strength of the material.</p></li>
+</ol>
+<h1
+id="some-useful-relations-between-elastic-constants-for-isotropic-materials">Some
+Useful Relations between Elastic Constants for Isotropic<br />
+Materials</h1>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span
+class="math inline">\(G=\dfrac{E}{2(1+\nu)}\)</span>,</th>
+<th style="text-align: center;"><span
+class="math inline">\(K=\dfrac{E}{3(1-2\nu)}\)</span>,</th>
+<th style="text-align: center;"><span
+class="math inline">\(\lambda=\dfrac{E\nu}{(1+\nu)(1-2\nu)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
