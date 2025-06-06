@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,45 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>von Mises Yield Criterion</h2>
+<p>At a material point, the elastic constitutive equation fails to hold
+when a yield condition is met. One of the prominent yield condition used
+is the Mises (named after von Mises) yield condition: <span
+class="math display">\[\text{Yield occurs/starts at a material point
+when }\quad \bar{\sigma} = \sigma_Y\]</span> <span
+class="math display">\[\textrm{where,}\qquad \quad \bar{\sigma} =
++\,\sqrt{\; \frac{1}{2}\Big\{(\sigma_{xx} - \sigma_{yy})^2 +
+(\sigma_{yy} - \sigma_{zz})^2 + (\sigma_{xx} - \sigma_{zz})^2\Big\} \; +
+\;3(\sigma_{xy}^2 + \sigma_{yz}^2 + \sigma_{xz}^2) \; }\]</span> is the
+equivalent Mises stress, and <span
+class="math inline">\(\sigma_Y\)</span> is the <em>tensile yield
+strength</em> (material property) of the material.</p>
+
+<h2>Cylindrical Coordinates</h2>
+<li><p><strong>Yield condition</strong><br />
+<span class="math display">\[\text{Yield occurs/starts at a material
+point when }\quad \bar{\sigma} = \sigma_y\]</span> where, <span
+class="math display">\[\bar{\sigma} = \sqrt{\;
+\frac{1}{2}\Big\{\,(\sigma_{rr} - \sigma_{\theta \theta})^2 +
+(\sigma_{\theta \theta} - \sigma_{zz})^2 + (\sigma_{rr} -
+\sigma_{zz})^2\,\Big\} \;+ \;3(\sigma_{r\theta}^2 + \sigma_{\theta z}^2
++ \sigma_{rz}^2) \; }\]</span> is the equivalent Mises stress, and <span
+class="math inline">\(\sigma_y\)</span> is the tensile yield strength of
+the material.</p></li>
+</ol>
+
+<h2>Spherical Coordinates</h2>
+<li><p><strong>Yield condition</strong><br />
+<span class="math display">\[\text{Yield occurs/starts at a material
+point when }\quad \bar{\sigma} = \sigma_y\]</span> where, <span
+class="math display">\[\bar{\sigma} = \sqrt{\;
+\frac{1}{2}\{\,(\sigma_{rr} - \sigma_{\theta \theta})^2 +
+(\sigma_{\theta \theta} - \sigma_{\phi\phi})^2 + (\sigma_{rr} -
+\sigma_{\phi\phi})^2\,\}+ 3(\sigma_{r\theta}^2 \;+\; \sigma_{\theta
+\phi}^2 + \sigma_{r\phi}^2) \; }\]</span> is the equivalent Mises
+stress, and <span class="math inline">\(\sigma_y\)</span> is the tensile
+yield strength of the material.</p></li>
+</ol>
 </div>
 </div>
 

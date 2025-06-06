@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,31 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Torsion</h2>
+       <ol type="i">
+<li><p><strong>Torsion of Cylindrical Elastic Bars</strong><br />
+Consider cylindrical coordinate system with position coordinates <span
+class="math inline">\((r,\theta, z)\)</span> and basis vectors <span
+class="math inline">\(\{\bm{\hat{e}}_r, \bm{\hat{e}}_{\theta},
+\bm{\hat{e}}_z \}\)</span> for a hollow cylindrical bar that has inner
+radius <span class="math inline">\(R_i\)</span>, outer radius <span
+class="math inline">\(R_o\)</span>, length <span
+class="math inline">\(L\)</span>, and shear modulus <span
+class="math inline">\(G\)</span>. Consider <span
+class="math inline">\(\alpha = \frac{d\phi}{dz}\)</span> as
+rotation/twist per unit length and angle in <em>radians</em>. <span
+class="math display">\[\begin{aligned}
+\textrm{Total Twist} \quad \Phi &amp;= \int_0^L \alpha \, dz \\
+\textrm{For uniform geometry and material across length } \Phi &amp;=
+\alpha\, L \\
+\textrm{Shear Stress  } \quad \tau &amp;= \sigma_{\theta z} =
+G\,\gamma_{\theta z} = G\,\alpha\, r = \dfrac{T\,r}{J}\\
+\textrm{Torsional Moment/Torque  } \quad T &amp;= GJ\alpha =
+GJ\frac{\Phi}{L}\\
+J \textrm{ is polar moment of inertia with}  \quad J &amp;=\iint_A
+r^2\,dA =\frac{\pi (R_o^4-R_i^4)}{2} \;\;
+\end{aligned}\]</span></p></li>
+</ol>
 </div>
 </div>
 

@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,28 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>1D Small Strain Plasticity</h2>
+
+<p>For a case when the applied uniaxial stress <span
+class="math inline">\(\sigma\)</span> is higher than the tensile yield
+strength (<span class="math inline">\(\sigma_Y\)</span>) of the material
+<span class="math inline">\((\sigma &gt; \sigma_Y\)</span>), then <span
+class="math display">\[\begin{aligned}
+\epsilon &amp;= \epsilon^e + \epsilon^p; \quad \textrm{and}\\
+\sigma &amp;= E\, \epsilon^e \quad \textrm{(Hooke&#39;s Law)}
+\end{aligned}\]</span> where <span
+class="math inline">\(\epsilon\)</span> is the total strain, <span
+class="math inline">\(\epsilon^e\)</span> and <span
+class="math inline">\(\epsilon^p\)</span> are elastic and plastic
+strains, respectively. Hooke’s Law is for Linear Elastic Materials and
+relates elastic strain to stress.<br />
+Under elastic-plastic deformation, <span
+class="math display">\[\begin{aligned}
+\textrm{Total work done per unit volume is} \quad \mathcal{W} &amp;=
+\int_{0}^{\epsilon} \sigma\,d\epsilon\\
+\textrm{Elastic energy stored per unit volume is}  \quad \mathcal{U}
+&amp;=  \dfrac{1}{2}\sigma \epsilon^e
+\end{aligned}\]</span></p>
 </div>
 </div>
 

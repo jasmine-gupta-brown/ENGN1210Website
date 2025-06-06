@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,101 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+		<h2>Statics</h2>
+
+  	<p>Vectors are shown in <strong>bold</strong>.</p>
+<ol type="i">
+<li><p><strong>Force, Position and Moment Vectors in a Continuum
+Body</strong><br />
+In a cartesian coordinate system with origin <span
+class="math inline">\(O\)</span> and unit vectors {<span
+class="math inline">\(\bm{\hat{e}}_x, \bm{\hat{e}}_y,
+\bm{\hat{e}}_z\)</span>} <span class="math display">\[\begin{aligned}
+\textrm{Position vector of a point P:} \quad \textbf{r} &amp;=
+r_x\,\bm{\hat{e}}_x +r_y\,\bm{\hat{e}}_y +r_z\,\bm{\hat{e}}_z\\
+\textrm{A force (vector) acting on P:} \quad \textbf{F} &amp;=
+F_x\,\bm{\hat{e}}_x +F_y\,\bm{\hat{e}}_y +F_z\,\bm{\hat{e}}_z\\
+\textrm{Moment due to force } \textbf{F} \textrm{ about O:} \quad
+\textbf{M}_O = \textbf{r}\times\textbf{F} &amp;=
+{M_O}_x\,\bm{\hat{e}}_x+{M_O}_y\,\bm{\hat{e}}_y+{M_O}_z\,\bm{\hat{e}}_z
+\end{aligned}\]</span> The magnitude of the moment about an axis due to
+a force is given by <em>the force magnitude</em> <span
+class="math inline">\(\times\)</span> <em>minimum distance between the
+axis and the force vector line</em> (perpedicular distance).</p></li>
+<li><p><strong>General Equilibrium Equations</strong><br />
+If multiple forces and moments act on a body represented by <span
+class="math inline">\(i = 1,2,3\)</span>...<br />
+Vector Form: <span class="math display">\[\sum_{i=1}^{n}
+\textbf{F}^{(i)}=\textbf{0}\]</span> <span
+class="math display">\[\sum_{i=1}^{p}
+{\textbf{M}_O}^{(i)}=\textbf{0}\]</span> Scalar Form: <span
+class="math display">\[\sum_{i=1}^{n}   F_x^{(i)}=0, \quad
+\sum_{i=1}^{n}  \;F_y^{(i)}=0, \quad
+\sum_{i=1}^{n}  F_z^{(i)}=0\]</span> <span
+class="math display">\[\sum_{i=1}^{p}
+{M_O}_x^{(i)}=0,\quad\sum_{i=1}^{p} {M_O}_y^{(i)}=0,\quad \sum_{i=1}^{p}
+{M_O}_z^{(i)}=0\]</span></p></li>
+<li><p><strong>Centroid</strong> <span
+class="math display">\[\tilde{X}=\frac{\int \;xdv}{\int \; dv},\quad
+\tilde{Y}=\frac{\int \;ydv}{\int \; dv}, \quad \tilde{Z}=\frac{\int
+\;zdv}{\int \; dv}\]</span></p></li>
+<li><p><strong>Center of Gravity</strong><br />
+Discrete Bodies System (each body is represented by subscript <span
+class="math inline">\(i\)</span>, where <span class="math inline">\(i =
+1,2,3,\)</span>...): <span
+class="math display">\[\bar{X}=\frac{\sum\limits_{i}  x_i\,
+w_i}{\sum\limits_{i} w_i},\quad \bar{Y}=\frac{\sum\limits_{i} y_i \,
+w_i}{\sum\limits_{i} w_i},\quad \bar{Z}=\frac{\sum\limits_{i} z_i\,
+w_i}{\sum\limits_{i} w_i}\]</span> Continuum Body: <span
+class="math display">\[\bar{X}=\frac{\int \;xdw}{\int \; dw},\quad
+\bar{Y}=\frac{\int \;ydw}{\int \; dw},\quad \bar{Z}=\frac{\int
+\;zdw}{\int \; dw}, \quad \textrm{where} \quad dw=\rho
+dV\]</span></p></li>
+<li><p><strong>Dry Friction</strong><br />
+<span class="math display">\[\textrm{Static: } \; F_f \leqslant \; \mu_s
+\, N, \qquad \textrm{Dynamic: } F_f = \; \mu_k \, N\]</span></p></li>
+<li><p><strong>Gravitational Acceleration:</strong> <span
+class="math inline">\(g=9.8\; m/s^2\)</span></p></li>
+</ol>
+
+<h2>Cylindrical Coordinates</h2>
+<li><p><strong>Equations of motion/Cauchy momentum equations
+(Equilibrium equations)</strong><br />
+<span class="math display">\[\frac{\partial \sigma_{rr}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{r\theta}}{\partial \theta} +
+\frac{\partial \sigma_{rz}}{\partial z} + \frac{1}{r} (\sigma_{rr} -
+\sigma_{\theta \theta}) + b_r = \rho\frac{\partial^2 u_r}{\partial
+t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{r\theta}}{\partial r} + \frac{1}{r}\frac{\partial \sigma_{\theta
+\theta}}{\partial \theta} + \frac{\partial \sigma_{\theta z}}{\partial
+z} + \frac{2}{r} \sigma_{\theta r} + b_\theta = \rho\frac{\partial^2
+u_\theta}{\partial t^2}\]</span> <span
+class="math display">\[\frac{\partial \sigma_{rz}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{\theta z}}{\partial \theta} +
+\frac{\partial \sigma_{zz}}{\partial z} + \frac{\sigma_{zr}}{r} + b_z =
+\rho\frac{\partial^2 u_z}{\partial t^2}\]</span></p></li>
+
+<h2>Spherical Coordinates</h2>
+<li><p><strong>Equations of motion/Cauchy momentum equations
+(Equilibrium equations)</strong><br />
+<span class="math display">\[\frac{\partial \sigma_{rr}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{r\theta}}{\partial \theta} +
+\frac{1}{r\sin \theta}\frac{\partial \sigma_{r\phi}}{\partial \phi} +
+\frac{1}{r} (2\sigma_{rr} - \sigma_{\theta \theta} - \sigma_{\phi\phi} +
+\cot \theta \; \sigma_{r\theta}) + b_r = \rho\frac{\partial^2
+u_r}{\partial t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{r\theta}}{\partial r} + \frac{1}{r}\frac{\partial \sigma_{\theta
+\theta}}{\partial \theta} + \frac{1}{r\sin \theta}\frac{\partial
+\sigma_{\theta \phi}}{\partial \phi} + \frac{1}{r}[ 3 \sigma_{\theta r}
++ \cot \theta (\sigma_{\theta \theta} - \sigma_{\phi\phi})] + b_\theta =
+\rho\frac{\partial^2 u_\theta}{\partial t^2}\]</span> <span
+class="math display">\[\frac{\partial \sigma_{r\phi}}{\partial r} +
+\frac{1}{r}\frac{\partial \sigma_{\theta \phi}}{\partial \theta} +
+\frac{1}{r\sin \theta} \frac{\partial \sigma_{\phi \phi}}{\partial
+\phi}+ \frac{1}{r} (3 \sigma_{\phi r} + 2 \cot \theta \; \sigma_{\phi
+\theta}) + b_\phi = \rho\frac{\partial^2 u_\phi}{\partial
+t^2}\]</span></p></li>
+
 </div>
 </div>
 

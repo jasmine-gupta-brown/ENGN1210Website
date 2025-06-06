@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,55 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Small Strain (General/3D) at a Point</h2>
+        <<li><p><strong>Displacement</strong><br />
+If <span class="math inline">\(\bm{u} \; (= u_x\, \bm{\hat{e}}_x + u_y\,
+\bm{\hat{e}}_y +  u_z\, \bm{\hat{e}}_z\)</span>) is the displacement
+vector of a material point due to deformation,</p></li>
+<li><p><strong>Normal Strains (In the Cartesian Coordinate
+System)</strong> <span class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \frac{\partial u_x}{\partial x} \\
+\epsilon_{yy} &amp;= \frac{\partial u_y}{\partial y} \\
+\epsilon_{zz} &amp;= \frac{\partial u_z}{\partial z}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Shear Strains (In the Cartesian Coordinate
+System)</strong> <span class="math display">\[\begin{aligned}
+\epsilon_{xy} &amp;= \epsilon_{yx} = \dfrac{1}{2}\,\Big(\frac{\partial
+u_x}{\partial y} + \frac{\partial u_y}{\partial x}\Big) = \dfrac{1}{2}\,
+\gamma_{xy}\\
+\epsilon_{yz} &amp;= \epsilon_{zy} = \dfrac{1}{2}\,\Big(\frac{\partial
+u_y}{\partial z} + \frac{\partial u_z}{\partial y}\Big) = \dfrac{1}{2}\,
+\gamma_{yz}\\
+\epsilon_{xz} &amp;= \epsilon_{zx} = \dfrac{1}{2}\,\Big(\frac{\partial
+u_x}{\partial z} + \frac{\partial u_z}{\partial x}\Big) = \dfrac{1}{2}\,
+\gamma_{xz}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Volumetric Strain</strong> <span
+class="math display">\[\epsilon_V = \frac{V-V_0}{V_0} \approx tr
+\bm{\epsilon} = \epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}\]</span></p></li>
+<li><p><strong>Strain Gauge Rosettes for Planar 2D Strain
+Measurements</strong>:<br />
+Consider that a strain gauge is identified with number classifier <span
+class="math inline">\(\beta\)</span> where angle <span
+class="math inline">\(\theta_{\beta}\)</span> is strain gauge’s
+orientation with respect to the <span
+class="math inline">\(x\)</span>-axis. If the strain gauge measures
+strain value <span class="math inline">\(\epsilon^*_{\beta}\)</span>
+along its longitudinal direction, we have <span
+class="math display">\[\begin{aligned}
+\epsilon^*_{\beta} &amp;= \dfrac{1}{2}\,(\epsilon_{xx} + \epsilon_{yy})
++  \dfrac{1}{2}\,(\epsilon_{xx} - \epsilon_{yy})\, \cos 2\theta_{\beta}
++ \epsilon_{xy}\,\sin 2\theta_{\beta}
+\end{aligned}\]</span> If there are three strain gauges in a Rosette,
+then these strain gauges are identified as <span
+class="math inline">\(\beta = 1,2\)</span> and <span
+class="math inline">\(3\)</span>. In a plane (2D), one will need three
+strain gauge measurements (<span class="math inline">\(\epsilon^*_1,
+\epsilon^*_2, \epsilon^*_3\)</span>) to obtain the three unknown strains
+<span class="math inline">\(\epsilon_{xx}, \epsilon_{yy},
+\epsilon_{xy}\)</span> and fully define strain at a point.</p></li>
+</ol>
 </div>
 </div>
 

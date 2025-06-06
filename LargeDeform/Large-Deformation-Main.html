@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,90 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Large Deformation Stress and Strain</h2>
+        <ol type="i">
+<li><p><strong>1D Stress and Strain</strong><br />
+Consider uniaxial tension or compression with <span
+class="math inline">\(L_0, A_0\)</span> as the original axial length and
+cross-sectional area, respectively, and <span class="math inline">\(L,
+A\)</span> as the deformed axial length and cross-sectional area. When
+strains are large (strains much <em>greater</em> than a few percent):
+(i) the change in deformed geometry cannot be ignored and needs to be
+accounted for, and (ii) the material response (relationship between
+stress and strain) typically becomes nonlinear. <span
+class="math display">\[\begin{aligned}
+\textbf{Engineering/Nominal Strain and Stress:}&amp; \quad
+\epsilon_{eng} =\frac{\mathop{}\!\mathbin\bigtriangleup L}{L_0}, \quad
+\sigma_{eng} = \frac{F}{A_0}\\
+\textbf{Stretch Ratio:}&amp; \quad \lambda =\frac{L}{L_0} =
+\frac{L_0+\mathop{}\!\mathbin\bigtriangleup L}{L_0} = 1 +
+\epsilon_{eng}\\
+\textrm{True Strain:}&amp; \quad \epsilon =\ln (1+\epsilon_{eng}) =
+\ln(\lambda) \\\\
+\textbf{True Stress:}&amp; \quad \sigma =\frac{F}{A}\\
+\textrm{True Stress:}&amp; \quad \sigma = \lambda\; \sigma_{eng}
+\end{aligned}\]</span></p></li>
+<li><p><strong>3D Nonlinear Elastic (Hyperelastic) Modeling</strong></p>
+<ul>
+<li><p><strong>Kinematics:</strong> Displacement Gradient <span
+class="math inline">\(\textbf{H}\)</span>: <span
+class="math inline">\(H_{ij} = \dfrac{\partial u_i}{\partial
+X_j}\)</span> (<span class="math inline">\(\textbf{u}\)</span> is
+displacement vector)<br />
+Deformation Gradient <span class="math inline">\(\textbf{F} = \textbf{H
++ 1}\)</span>. In principal coordinate frame <span
+class="math inline">\([\textbf{F}] = \begin{bmatrix}
+    \lambda_1 &amp; 0 &amp; 0 \\
+    0 &amp; \lambda_2 &amp; 0  \\    
+    0 &amp; 0&amp; \lambda_3  
+\end{bmatrix}\)</span>.</p></li>
+<li><p><strong>Strain Measures:</strong> Strain measures are
+mathematical constructs to measure normalized deformations. There are
+many accepted strain measures. All strain measures are functions of
+<span class="math inline">\((\textbf{F}^T \textbf{F})\)</span>.<br />
+One common (basic) strain measure is Green Strain <span
+class="math inline">\(\textbf{E}\)</span>, where <span
+class="math display">\[\textbf{E} = \dfrac{1}{2}(\textbf{F}^T \textbf{F}
+- \textbf{1}) = \dfrac{1}{2}(\textbf{H}+\textbf{H}^T+\textbf{H}^T
+\textbf{H})\]</span> For small strains, <span
+class="math inline">\(\textbf{H}^T \textbf{H}\)</span> can be neglected.
+Green Strain <em>for small strains</em>: <span
+class="math display">\[\textbf{E} \equiv \bm{\epsilon} =
+\dfrac{1}{2}(\textbf{H}+\textbf{H}^T)\]</span></p></li>
+<li><p><strong>Constitutive Model:</strong> Defined as free energy
+density function<br />
+<span class="math inline">\(\psi
+=\hat{\psi}(\lambda_1,\lambda_2,\lambda_3, \textrm{model
+parameters})\)</span>, where <span class="math inline">\(\lambda_1,
+\lambda_2,\lambda_3\)</span> are principal stretches.<br />
+</p></li>
+<li><p><strong>Neo-Hookean Model</strong> (a simple nonlinear model):
+<span class="math inline">\(\psi = C_1(\lambda_1^2 + \lambda_2^2 +
+\lambda_3^2 -3 )\)</span><br />
+<br />
+where <span class="math inline">\(C_1\)</span> is the material model
+parameter.<br />
+Note: Ground state shear modulus <span class="math inline">\(G\)</span>
+(initial shear modulus) <span class="math inline">\(\approx
+\frac{C_1}{2}\)</span>.<br />
+</p></li>
+<li><p><strong>Stresses</strong> (for isotropic, incompressible elastic
+materials):<br />
+<span class="math inline">\(\sigma_1 = \lambda_1 \, \dfrac{\partial
+\psi}{\partial \lambda_1} -P^*; \qquad \sigma_2 = \lambda_2 \,
+\dfrac{\partial \psi}{\partial \lambda_2} -P^*; \qquad \sigma_3 =
+\lambda_3 \, \dfrac{\partial \psi}{\partial \lambda_3}
+-P^*,\)</span><br />
+where <span class="math inline">\(\sigma_1, \sigma_2, \sigma_3\)</span>
+are principal stresses, and <span class="math inline">\(P^*\)</span> is
+an unknown pressure-like variable (also known as a Lagrange multiplier)
+to be obtained by the boundary conditions of the problem.<br />
+Note: Volume ratio <span class="math inline">\(\dfrac{V}{V_0} = det \,
+\textbf{F} = \lambda_1 \lambda_2 \lambda_3 = 1\)</span> for
+incompressible materials.<br />
+</p></li>
+</ul></li>
+</ol>
 </div>
 </div>
 

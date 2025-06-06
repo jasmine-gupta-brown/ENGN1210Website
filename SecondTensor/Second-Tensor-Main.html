@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,85 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Second Order Tensor</h2>
+        <p>For a second order tensor, in index notation, subscripts i and j
+represent values as either {1,2,3} or {x,y, z} in the cartesian
+coordinate system, represent {r, <span
+class="math inline">\(\theta\)</span>, z} in the cylindrical coordinate
+system, and {r, <span class="math inline">\(\theta, \phi\)</span>} in
+the spherical coordinate system. With <span
+class="math inline">\(\bm{A}\)</span> as a second order (3x3) tensor (it
+can represent a stress or a strain tensor),</p>
+<ol type="i">
+<li><p><strong>Transpose of a Tensor</strong>: <span
+class="math inline">\(\bm{A}^T\)</span> <span
+class="math display">\[[{A}_{ij}]^T = [{A}_{ji}]\]</span></p></li>
+<li><p><strong>Trace of a Tensor</strong>: <span
+class="math display">\[tr\, \textbf{A} = A_{xx} +
+A_{yy}+A_{zz}\]</span></p></li>
+<li><p><strong>Deviatoric Part or Deviator of a Tensor</strong>: <span
+class="math display">\[dev \, \textbf{A} = \textbf{A}_0 = \textbf{A} -
+\dfrac{1}{3}\, (tr \textbf{A})\, \bm{1}\]</span></p></li>
+<li><p><strong>Determinant of a Tensor</strong>:<br />
+det<span class="math inline">\(\textbf{A}\)</span> is determinant of
+<span class="math inline">\(\textbf{A}\)</span> matrix.<br />
+<br />
+Determinant of a <span class="math inline">\(3\times 3\)</span> matrix:
+<span class="math display">\[det
+\begin{bmatrix}
+A_{xx} &amp; A_{xy} &amp; A_{xz}\\
+A_{yx} &amp; A_{yy} &amp; A_{yz}\\
+A_{zx} &amp; A_{zy} &amp; A_{zz}
+\end{bmatrix}
+=A_{xx}\,(A_{yy}\,A_{zz} - A_{yz}\,A_{zy}) -A_{xy}\, (A_{yx}\,A_{zz} -
+A_{yz}\,A_{zx}) +A_{xz}\, (A_{yx}\,A_{zy}-A_{yy}\,A_{zx})\]</span>
+Determinant of a <span class="math inline">\(2\times 2\)</span>
+matrix:<br />
+<span class="math inline">\(det
+\begin{bmatrix}
+A_{xx} &amp; A_{xy} \\
+A_{yx} &amp; A_{yy} \\
+\end{bmatrix}
+=A_{xx}A_{yy}-A_{xy}A_{yx}\\
+\)</span></p></li>
+<li><p><strong>Eigen Values (Principal Values) and Eigen Directions
+(Principal Directions)</strong><br />
+Eigen/Principal values are solution <span
+class="math inline">\(\omega_i\)</span>’s of the equation: <span
+class="math display">\[det[\bm{A}-\omega\,\bm{1}]=0 \qquad
+\textrm{(where $\bm{1}$ is the identity tensor)}\]</span> <span
+class="math display">\[\implies det
+\begin{bmatrix}
+A_{xx}-\omega &amp; A_{xy} &amp; A_{xz}\\
+A_{xy} &amp; A_{yy}-\omega &amp;A_{yz}\\
+A_{xz} &amp; A_{yz} &amp; A_{zz}-\omega
+\end{bmatrix}
+= 0\]</span> Note that for stress and strain, the highest eigenvalue
+when positive is the <em>maximum tensile stress/strain</em> acting at
+that material point.<br />
+If <span class="math inline">\(\bm{\hat{m}}\)</span> is the eigenvector
+(Principal direction) corresponding to an eigenvalue (Principal value)
+<span class="math inline">\(\omega_i\)</span>, then: <span
+class="math display">\[[\bm{A}-\omega_i\,\bm{1}]\,\{\bm{\hat{m}}\}=\{\textbf{0}\}\]</span>
+<span class="math display">\[\begin{bmatrix}
+A_{xx}-\omega_i &amp; A_{xy} &amp; A_{xz}\\
+A_{xy} &amp; A_{yy}-\omega_i &amp;A_{yz}\\
+A_{xz} &amp; A_{yz} &amp; A_{zz}-\omega_i
+\end{bmatrix}
+\begin{bmatrix}
+m_x\\
+m_y\\
+m_z
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix}\]</span> <span class="math display">\[\textrm{where }
+\quad m_x^2 + m_y^2 + m_z^2 = 1 \quad \textrm{since } \bm{\hat{m}}
+\textrm{ is a unit vector.}\]</span></p></li>
+</ol>
 </div>
 </div>
 

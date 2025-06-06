@@ -68,7 +68,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -119,6 +119,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -143,7 +144,67 @@
 	<!-- Page Content -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
+  	<h2>Thin Wall Pressurized Cylinders and Spheres</h2>
+<p>Consider an internal pressure <span
+class="math inline">\(P_i\)</span> which is greater than the outer
+pressure <span class="math inline">\(P_o\)</span> acting on a
+thin-walled hollow structure with thickness <span
+class="math inline">\(t &lt;&lt; R \; \text{(radius)}\)</span>. Let us
+represent the difference between internal pressure (<span
+class="math inline">\(P_i\)</span>) and outer pressure (<span
+class="math inline">\(P_o\)</span>) as net pressure <span
+class="math inline">\(P\)</span> so <span class="math inline">\(P = P_i
+- P_o\)</span> (In the case when outer/external pressure is zero, then
+<span class="math inline">\(P=P_i\)</span>).</p>
+<ol type="i">
+<li><p><strong>Thin Wall Cylinder</strong><br />
+Consider a cylindrical coordinate system with position coordinates <span
+class="math inline">\((r,\theta, z)\)</span> and coordinate system basis
+<span class="math inline">\(\{\bm{\hat{e}}_r, \bm{\hat{e}}_{\theta},
+\bm{\hat{e}}_z \}\)</span> for a hollow cylinder that experiences net
+internal pressure, then <span class="math display">\[\begin{aligned}
+\sigma_{\theta\theta} &amp;= \dfrac{P\,R}{t}\\
+\sigma_{rr} &amp;= 0 \qquad \qquad \qquad \quad (\textrm{note: }
+\sigma_{rr} \sim P &lt;&lt; \sigma_{\theta\theta} \implies \sigma_{rr}
+\approx 0),  \quad \textrm{and}
+\end{aligned}\]</span> <span class="math display">\[\begin{aligned}
+\begin{cases}
+\sigma_{zz} &amp;= \dfrac{P\,R}{2 t} \qquad \qquad \text{(if the axial
+ends are closed/capped)  \quad    OR}\\
+\sigma_{zz} &amp;= 0 \qquad \qquad \quad \;\; \text{(if the axial ends
+are open) }
+\end{cases}
+\end{aligned}\]</span></p>
+<p>The <em>material volume</em> approximation for a thin-walled hollow
+cylinder with length <span class="math inline">\(L\)</span> is <span
+class="math inline">\(V = 2 \pi R \, t \, L\)</span>.<br />
+{<em>Note:</em> Volume of material <span class="math inline">\(V = \pi
+(R_o^2 - R_i^2) \,L = \pi (R_o+R_i)(R_o-R_i)\, L.  \\
+R_o - R_i = t\)</span>, and for a thin wall case, <span
+class="math inline">\(R_o+R_i \approx 2R \implies V \approx 2 \pi R \, t
+\, L\)</span>}</p></li>
+<li><p><strong>Thin Wall Sphere</strong><br />
+Consider a spherical coordinate system with position coordinates <span
+class="math inline">\((r,\theta, \phi)\)</span> and coordinate system
+basis <span class="math inline">\(\{\bm{\hat{e}}_r,
+\bm{\hat{e}}_{\theta}, \bm{\hat{e}}_{\phi} \}\)</span> for a hollow
+sphere that experiences net internal pressure, then <span
+class="math display">\[\begin{aligned}
+\sigma_{\theta\theta} = \sigma_{\phi\phi}  &amp;= \dfrac{P\,R}{2 t} \\
+\sigma_{rr} &amp;= 0 \qquad \qquad (\textrm{note: } \sigma_{rr} \sim P
+&lt;&lt; \sigma_{\theta\theta} \implies \sigma_{rr} \approx 0)
+\end{aligned}\]</span></p>
+<p>The <em>material volume</em> approximation for a thin-walled sphere
+is <span class="math inline">\(V = 4 \pi R^2 \, t\)</span>.<br />
+{<em>Note:</em> Volume of material <span class="math inline">\(V =
+\frac{4}{3} \pi (R_o^3 - R_i^3)  =  \frac{4}{3} \pi
+(R_o^2+R_i^2+R_oR_i)(R_o-R_i)\)</span><br />
+with <span class="math inline">\(R_o - R_i = t\)</span>, and for a thin
+wall case, <span class="math inline">\(R_o \approx R_i \approx
+R\)</span>, leads to <span class="math inline">\(V \approx 4 \pi R^2 \,
+t\)</span>}</p></li>
+</ol>
+
         <p>Explore the key topics in Thin Pressure Vessels below:</p>
         <ul>
             <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>

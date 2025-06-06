@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,51 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Beam Bending</h2>
+       <p><span class="roman">For a beam bending in the x-y plane, with x-axis
+along the neutral axis. At any given axial location <span
+class="math inline">\(x\)</span> in the bent, slender beam:</span><br />
+<br />
+<strong>General relations:</strong></p>
+<ol>
+<li><p>Geometry relation <span class="math display">\[\epsilon_{xx} =
+-\kappa y = -\frac{y}{\rho}\]</span> Where <span
+class="math inline">\(y\)</span> is the distance from the neutral axis,
+<span class="math inline">\(\kappa\)</span> is the curvature of the
+local point, and <span class="math inline">\(\rho\)</span> is the radius
+of curvature for the neutral axis.</p></li>
+<li><p>Moment balance <span class="math display">\[M = -\iint_A y \,
+\sigma_{xx} \,dA\]</span></p></li>
+<li><p>Given <span class="math inline">\(v\)</span> as deflection of the
+beam (at the neutral axis) in the transverse direction. <span
+class="math display">\[\textrm{curvature:  } \kappa = \frac{d^2 v}{d
+x^2},\qquad \textrm{slope:  }\theta = \frac{dv}{dx}\]</span></p></li>
+</ol>
+<p><strong>For linear elastic materials:</strong></p>
+<ol>
+<li><p>Moment-curvature relation <span class="math display">\[M =
+\frac{EI}{\rho} = EI\kappa\]</span></p></li>
+<li><p>Axial stress and moment relation <span
+class="math display">\[\sigma_{xx} = -\frac{My}{I}\]</span></p></li>
+<li><p>Governing equation for deflection <span
+class="math inline">\(v\)</span> of a beam <span
+class="math display">\[\dfrac{d^2 v}{dx^2} = \dfrac{M}{E
+I}\]</span></p></li>
+<li><p>Second moment of inertia for common beam cross-sections:<br />
+For a beam with rectangular cross-section where the beam thickness is h
+(in the plane of bending) and width is b (width in z-direction if
+bending is in x-y plane), <span class="math display">\[I = \frac{1}{12}
+bh^3\]</span> For a cylindrical beam with cross-sectional outside radius
+<span class="math inline">\(R_o\)</span> and internal radius <span
+class="math inline">\(R_i\)</span>, <span class="math display">\[I =
+\frac{\pi}{4} (R_o^4-R_i^4)\]</span></p>
+<figure>
+<img src="SomeBeamBC.png" />
+<figcaption>Examples of end conditions and corresponding boundary
+conditions (B.C.). <span class="math inline">\(V\)</span> is the shear
+force:</figcaption>
+</figure></li>
+</ol>
 </div>
 </div>
 

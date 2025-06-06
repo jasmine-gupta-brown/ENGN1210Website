@@ -68,7 +68,7 @@
         .side-menu a {
             padding: 8px 16px;
             text-decoration: none;
-            font-size: 25px;
+            font-size: 16px;
             color: white;
             display: block;
             transition: 0.3s;
@@ -119,6 +119,7 @@
     <div id="sideMenu" class="side-menu">
         <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
         <a href="/ENGN1210Website/index.html">Home</a>
+        <a href="/ENGN1210Website/Contact.html">Contact Us!</a>
         <a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
         <a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
         <a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -144,6 +145,142 @@
 <div class="container">
     <div class="content">
         <h2>Simple Stress and Strain</h2>
+<p>Consider simple (uniaxial) tension/compression (stress is applied in
+the axial direction, and there are no stresses in transverse
+(perpendicular to axial) directions). For shear, consider a force
+parallel to the surface. <span class="math inline">\(A_0, L_0,
+w_0\)</span> are the original (relaxed) cross-sectional area, axial
+length (along loading direction), and width in the transverse direction,
+respectively. <span class="math inline">\(A, \Delta L, \Delta w\)</span>
+are the deformed (loaded) body cross-sectional area, change in axial
+length, and change in transverse width, respectively.<br />
+</p>
+<p><strong>Stress and Strain:</strong> <span
+class="math display">\[\textrm{Stress} \quad \sigma = \frac{F}{A}
+\approx \frac{F}{A_0} , \qquad \textrm{Normal strain} \quad \epsilon
+=\frac{\mathop{}\!\mathbin\bigtriangleup L}{L_0}\]</span></p>
+<p>shear strain = change in angle of perpendicular lines = <span
+class="math inline">\(\gamma \; (\approx \tan \, \gamma)\)</span><br />
+<strong>Linear Elasticity:</strong> In the elastic limit (before
+material yield occurs).</p>
+<ol type="i">
+<li><p><strong>Hooke’s Law</strong> <span
+class="math display">\[\begin{aligned}
+\textrm{Normal stress-strain relation:} \quad \sigma &amp;= E \,
+\epsilon, \quad \textrm{(where $E$ is Elastic/Young&#39;s Modulus)} \\
+\textrm{Shear stress-strain relation:} \quad \tau &amp;= G \,\gamma \;
+(\textrm{OR} \; \sigma_{ij} = G \,\gamma_{ij}, \; \textrm{when } i\neq
+j) \quad \textrm{($G$ is Shear Modulus)}
+\end{aligned}\]</span> Note: Tensorial strain <span
+class="math inline">\(\epsilon_{ij} =
+\frac{1}{2}\gamma_{ij}\)</span></p></li>
+<li><p><strong>Poisson’s Ratio</strong> <span
+class="math display">\[\nu=-\frac{\textrm{transverse strain}}{\textrm{
+axial strain}}=-\frac{\mathop{}\!\mathbin\bigtriangleup
+w/w_0}{\mathop{}\!\mathbin\bigtriangleup L/L_0}\]</span> Note: for
+incompressible materials (no volume change under deformation), <span
+class="math inline">\(\nu = \frac{1}{2}\)</span></p></li>
+<li><p><strong>Strain Energy Density (Energy per Unit Volume)</strong>
+<span class="math display">\[\begin{aligned}
+\textrm{Strain energy density (General): } \quad \mathcal{U} &amp;=\int
+\sigma\,d\epsilon\\
+\textrm{For \emph{linear elastic material}, $\mathcal{U}$ is
+\emph{elastic energy density stored}:} \quad \mathcal{U} &amp;=
+\dfrac{1}{2}E\epsilon^2 = \dfrac{1}{2}\sigma \epsilon =
+\dfrac{\sigma^2}{2E}\\
+\textrm{Total energy stored for the entire volume:} \quad \mathbb{U}
+&amp;= \int_V \; \mathcal{U}\, dV
+\end{aligned}\]</span></p>
+<p>Note: In (i, ii, iii), strain <span
+class="math inline">\(\epsilon\)</span> is <em>elastic strain</em> for
+the recoverable stored elastic energy (in the elastic limit, total
+strain is elastic strain).</p></li>
+</ol>
+
+<h2>Cylindrical Coordinates</h2>
+<p>Cylindrical coordinates <span class="math inline">\((r,\theta,
+z)\)</span> are related to Cartesian coordinates x, y, by <span
+class="math display">\[r=[x^2 + y^2]^{\frac{1}{2}}, \qquad \theta = \tan
+^{-1}(y/x),\qquad z = z\]</span> <span class="math display">\[x = r \cos
+\theta, \qquad y = r \sin \theta, \qquad z = z\]</span></p>
+<figure>
+<img src="cylindrical.png" />
+<figcaption>Figure 2. Polar cylindrical coordinate system</figcaption>
+</figure>
+<p>Orthonormal basis vectors <span class="math inline">\(\{\bm{e_r} ,
+\bm{e_\theta} , \bm{e_z}\}\)</span> in the cylindrical coordinate system
+are related to cartesian coordinate system by <span
+class="math display">\[\begin{aligned}
+\bm{e_r} &amp;= \cos \theta \bm{e_x} + \sin \theta \bm{e_y}\\
+\bm{e_\theta} &amp;= -\sin \theta \bm{e_x} + \cos \theta \bm{e_y}\\
+\bm{e_z} &amp;= \bm{e_z}
+\end{aligned}\]</span></p>
+<ol>
+<li><p><strong>Displacement</strong> <span
+class="math display">\[\textbf{u} = \textbf{x} - \textbf{X}\]</span>
+<span class="math display">\[u_r = \textbf{u} \cdot \bm{e_r}, \qquad
+u_\theta = \textbf{u} \cdot \bm{e_\theta}, \qquad u_z = \textbf{u} \cdot
+\bm{e_z}\]</span> <span class="math display">\[\textbf{u} = \sum_i u_i
+\bm{e_i} = u_r \bm{e_r} + u_\theta \bm{e_\theta} + u_z
+\bm{e_z}\]</span></p></li>
+<li><p><strong>Strain-displacement relations</strong> <span
+class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{\partial u_r}{\partial r}\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{r} \frac{\partial
+u_\theta}{\partial \theta} + \frac{u_r}{r}\\
+\epsilon_{zz} &amp;= \frac{\partial u_z}{\partial z}\\
+\epsilon_{r\theta} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} -
+\frac{u_\theta}{r}\Big) = \epsilon_{\theta r}\\
+\epsilon_{\theta z} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_z}{\partial \theta} + \frac{\partial u_\theta}{\partial z}\Big) =
+\epsilon_{z\theta}\\
+\epsilon_{rz} &amp;= \frac{1}{2} \, \Big(\frac{\partial u_r}{\partial z}
++ \frac{\partial u_z}{\partial r}\Big) = \epsilon_{zr}
+\end{aligned}\]</span></p></li>
+
+<h2>Spherical Coordinates</h2>
+<p>Cylindrical coordinates <span class="math inline">\((r,\theta,
+z)\)</span> are related to Cartesian coordinates x, y, by <span
+class="math display">\[r=[x^2 + y^2]^{\frac{1}{2}}, \qquad \theta = \tan
+^{-1}(y/x),\qquad z = z\]</span> <span class="math display">\[x = r \cos
+\theta, \qquad y = r \sin \theta, \qquad z = z\]</span></p>
+<figure>
+<img src="cylindrical.png" />
+<figcaption>Figure 2. Polar cylindrical coordinate system</figcaption>
+</figure>
+<p>Orthonormal basis vectors <span class="math inline">\(\{\bm{e_r} ,
+\bm{e_\theta} , \bm{e_z}\}\)</span> in the cylindrical coordinate system
+are related to cartesian coordinate system by <span
+class="math display">\[\begin{aligned}
+\bm{e_r} &amp;= \cos \theta \bm{e_x} + \sin \theta \bm{e_y}\\
+\bm{e_\theta} &amp;= -\sin \theta \bm{e_x} + \cos \theta \bm{e_y}\\
+\bm{e_z} &amp;= \bm{e_z}
+\end{aligned}\]</span></p>
+<ol>
+<li><p><strong>Displacement</strong> <span
+class="math display">\[\textbf{u} = \textbf{x} - \textbf{X}\]</span>
+<span class="math display">\[u_r = \textbf{u} \cdot \bm{e_r}, \qquad
+u_\theta = \textbf{u} \cdot \bm{e_\theta}, \qquad u_z = \textbf{u} \cdot
+\bm{e_z}\]</span> <span class="math display">\[\textbf{u} = \sum_i u_i
+\bm{e_i} = u_r \bm{e_r} + u_\theta \bm{e_\theta} + u_z
+\bm{e_z}\]</span></p></li>
+<li><p><strong>Strain-displacement relations</strong> <span
+class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{\partial u_r}{\partial r}\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{r} \frac{\partial
+u_\theta}{\partial \theta} + \frac{u_r}{r}\\
+\epsilon_{zz} &amp;= \frac{\partial u_z}{\partial z}\\
+\epsilon_{r\theta} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_r}{\partial \theta} + \frac{\partial u_\theta}{\partial r} -
+\frac{u_\theta}{r}\Big) = \epsilon_{\theta r}\\
+\epsilon_{\theta z} &amp;= \frac{1}{2} \, \Big(\frac{1}{r}\frac{\partial
+u_z}{\partial \theta} + \frac{\partial u_\theta}{\partial z}\Big) =
+\epsilon_{z\theta}\\
+\epsilon_{rz} &amp;= \frac{1}{2} \, \Big(\frac{\partial u_r}{\partial z}
++ \frac{\partial u_z}{\partial r}\Big) = \epsilon_{zr}
+\end{aligned}\]</span></p></li>
+
         <p>Explore the key topics in Simple Stress and Strain below:</p>
         <ul>
             <li><a href="/ENGN1210Website/Stress_Strain/stress-strain-introduction.html">Introduction to Simple Stress and Strain</a></li>

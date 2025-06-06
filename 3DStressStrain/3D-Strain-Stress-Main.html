@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,48 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Linear Elastic Stress-Strain Relations (Hooke’s Law) in 3D</h2>
+       <ol>
+<li><p><strong>Stress-Strain Relations for Isotropic
+Materials</strong><br />
+Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \frac{1}{E} \,[\sigma_{xx} - \nu(\sigma_{yy} +
+\sigma_{zz})]\\
+\epsilon_{yy} &amp;= \frac{1}{E} \,[\sigma_{yy} - \nu(\sigma_{xx} +
+\sigma_{zz})]\\
+\epsilon_{zz} &amp;= \frac{1}{E} \,[\sigma_{zz} - \nu(\sigma_{yy} +
+\sigma_{xx})]\\
+\epsilon_{xy} &amp;= \frac{1}{2G} \,\sigma_{xy} = \epsilon_{yx}\\
+\epsilon_{yz} &amp;= \frac{1}{2G} \,\sigma_{yz} = \epsilon_{zy}\\
+\epsilon_{xz} &amp;= \frac{1}{2G} \,\sigma_{xz} = \epsilon_{zx}
+\end{aligned}\]</span></p>
+<p>Stress from strains: <span class="math display">\[\begin{aligned}
+\sigma_{xx} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{xx}\\
+\sigma_{yy} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{yy}\\
+\sigma_{zz} &amp;= \lambda (\epsilon_{xx} + \epsilon_{yy} +
+\epsilon_{zz}) + 2G \epsilon_{zz}\\
+\sigma_{xy} &amp;= 2G\epsilon_{xy}\\
+\sigma_{yz} &amp;= 2G\epsilon_{yz}\\
+\sigma_{xz} &amp;= 2G\epsilon_{xz}
+\end{aligned}\]</span></p></li>
+<li><p><strong>Stress-Strain Relations for Transversely Isotropic
+Materials</strong><br />
+If the material is transversely isotropic in the <span
+class="math inline">\(x-y\)</span> plane, <span
+class="math display">\[\begin{aligned}
+\epsilon_{xx} &amp;= \dfrac{1}{E} \,\sigma_{xx} - \dfrac{\nu}{E}
+\,\sigma_{yy} - \dfrac{\nu&#39;}{E&#39;} \sigma_{zz}\\
+\epsilon_{yy} &amp;= \dfrac{1}{E} \,\sigma_{yy} - \dfrac{\nu}{E}
+\,\sigma_{xx} - \dfrac{\nu&#39;}{E&#39;} \sigma_{zz}\\
+\epsilon_{zz} &amp;= \dfrac{1}{E&#39;} \,\sigma_{zz} -
+\dfrac{\nu&#39;}{E} \,\sigma_{xx} - \dfrac{\nu&#39;}{E} \sigma_{yy}\\
+\epsilon_{xy} &amp;= \frac{1}{2G} \,\sigma_{xy} = \epsilon_{yx}\\
+\epsilon_{yz} &amp;= \frac{1}{2G&#39;} \,\sigma_{yz} = \epsilon_{zy}\\
+\epsilon_{xz} &amp;= \frac{1}{2G&#39;} \,\sigma_{xz} = \epsilon_{zx}
+\end{aligned}\]</span></p></li>
+</ol>
 </div>
 </div>
 

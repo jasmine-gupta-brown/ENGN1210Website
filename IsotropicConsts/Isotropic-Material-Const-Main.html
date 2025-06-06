@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,90 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Selected Useful Relations between Elastic Constants
+for Linear Isotropic Materials</h2>
+        <p>With <span class="math inline">\(E\)</span> as the Elastic/Young’s
+modulus and <span class="math inline">\(\nu\)</span> as the Poison’s
+ratio,</p>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span
+class="math inline">\(G=\dfrac{E}{2(1+\nu)}\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(K=\dfrac{E}{3(1-2\nu)}\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(\lambda=\dfrac{E\nu}{(1+\nu)(1-2\nu)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<p>where the Shear modulus <span class="math inline">\(G\)</span> is
+defined by: <span class="math inline">\(\quad \sigma_{xy} = G\,
+\gamma_{xy} = 2G\, \epsilon_{xy},\)</span><br />
+<br />
+and the Bulk modulus <span class="math inline">\(K\)</span> is defined
+by: <span class="math inline">\(K = -\dfrac{p}{\epsilon_V} =
+-\dfrac{p}{\frac{\triangle V}{V_0}}\quad\)</span>, where <span
+class="math inline">\(p\)</span> is mechanical/hydrostatic
+pressure.<br />
+<span class="math inline">\(\lambda \;\)</span> is Lameś constant.</p>
+
+<h2>Cylindrical stress-strain relations for isotropic materials</h2>
+<p>Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{1}{E}\, [\sigma_{rr} - \nu(\sigma_{\theta
+\theta} + \sigma_{zz})]\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{E}\, [\sigma_{\theta \theta} -
+\nu(\sigma_{rr} + \sigma_{zz})]\\
+\epsilon_{zz} &amp;= \frac{1}{E} \,[\sigma_{zz} - \nu(\sigma_{\theta
+\theta} + \sigma_{rr})]\\
+\epsilon_{r\theta} &amp;= \frac{1}{2G}\, \sigma_{r\theta} =
+\epsilon_{\theta r}\\
+\epsilon_{\theta z} &amp;= \frac{1}{2G} \,\sigma_{\theta z} =
+\epsilon_{z\theta}\\
+\epsilon_{rz} &amp;= \frac{1}{2G} \,\sigma_{rz} = \epsilon_{zr}
+\end{aligned}\]</span> Stress from strains: <span
+class="math display">\[\begin{aligned}
+\sigma_{rr} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta \theta} +
+\epsilon_{zz}) + 2G \epsilon_{rr}\\
+\sigma_{\theta \theta} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta
+\theta} + \epsilon_{zz}) + 2G \epsilon_{\theta \theta}\\
+\sigma_{zz} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta \theta} +
+\epsilon_{zz}) + 2G \epsilon_{zz}\\
+\sigma_{r\theta} &amp;= 2G\epsilon_{r\theta}\\
+\sigma_{\theta z} &amp;= 2G\epsilon_{\theta z}\\
+\sigma_{rz} &amp;= 2G\epsilon_{rz}
+\end{aligned}\]</span></p>
+
+<h2>Spherical stress-strain relations for isotropic materials</h2>
+<p> Strains from stress: <span class="math display">\[\begin{aligned}
+\epsilon_{rr} &amp;= \frac{1}{E} \,[\sigma_{rr} - \nu(\sigma_{\theta
+\theta} + \sigma_{\phi \phi})]\\
+\epsilon_{\theta \theta} &amp;= \frac{1}{E}\, [\sigma_{\theta \theta} -
+\nu(\sigma_{rr} + \sigma_{\phi \phi})]\\
+\epsilon_{\phi \phi} &amp;= \frac{1}{E} \,[\sigma_{\phi \phi} -
+\nu(\sigma_{\theta \theta} + \sigma_{rr})]\\
+\epsilon_{r\theta} &amp;= \frac{1}{2G} \,\sigma_{r\theta} =
+\epsilon_{\theta r}\\
+\epsilon_{\theta \phi} &amp;= \frac{1}{2G} \,\sigma_{\theta \phi} =
+\epsilon_{\phi \theta}\\
+\epsilon_{r\phi} &amp;= \frac{1}{2G} \,\sigma_{r\phi} = \epsilon_{\phi
+r}
+\end{aligned}\]</span> Stress from strains: <span
+class="math display">\[\begin{aligned}
+\sigma_{rr} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta \theta} +
+\epsilon_{\phi \phi}) + 2G \epsilon_{rr}\\
+\sigma_{\theta \theta} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta
+\theta} + \epsilon_{\phi \phi}) + 2G \epsilon_{\theta \theta}\\
+\sigma_{\phi \phi} &amp;= \lambda (\epsilon_{rr} + \epsilon_{\theta
+\theta} + \epsilon_{\phi \phi}) + 2G \epsilon_{\phi \phi}\\
+\sigma_{r\theta} &amp;= 2G\epsilon_{r\theta}\\
+\sigma_{\theta \phi} &amp;= 2G\epsilon_{\theta \phi}\\
+\sigma_{r\phi} &amp;= 2G\epsilon_{r\phi}
+\end{aligned}\]</span></p>
 </div>
 </div>
 

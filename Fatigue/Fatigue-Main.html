@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,36 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Fatigue</h2>
+        <ol>
+<li><p>S-N Curve Method:<br />
+The fatigue failure criteria for cyclic loading from multiple stress
+levels using Miner’s Rule is <span class="math display">\[\sum_i
+\frac{N_i}{{N_f}_i} = 1\]</span> Where <span
+class="math inline">\(N_i\)</span> is the number of cycles that have
+already been run for the i<span class="math inline">\(^{th}\)</span>
+stress magnitude, and <span class="math inline">\({N_f}_i\)</span> is
+the number of cycles to failure corresponding to the i<span
+class="math inline">\(^{th}\)</span> stress amplitude.<br />
+</p></li>
+<li><p>Paris’ Law: <span class="math display">\[\frac{da}{dN} =
+C\triangle K^m\]</span><br />
+Integration of the Paris equation gives: <span
+class="math display">\[\begin{aligned}
+    N_f &amp;= \frac{1}{C\,(\triangle \sigma \,Q \sqrt{\pi})^m} \,
+\frac{1}{(1-\frac{m}{2})}\, \Big\{a_f^{1-\frac{m}{2}} -
+a_i^{1-\frac{m}{2}}\Big\} \quad \text{ for  } m \ne 2\\
+    &amp;= \frac{1}{C\,(\triangle \sigma \,Q \sqrt{\pi})^2} \, \Big\{
+\ln (\dfrac{a_f}{a_i}) \Big\} \qquad \quad \text{when  } m = 2,
+    
+\end{aligned}\]</span> Where <span class="math inline">\(N_f\)</span> is
+the number of cycles for a crack to grow from initial length <span
+class="math inline">\(a_i\)</span> to a final length <span
+class="math inline">\(a_f\)</span>. In the equation, C and m are
+material properties, Q is the geometry and load factor, and <span
+class="math inline">\(\triangle \sigma\)</span> is the magnitude of
+stress variation in one cycle.</p></li>
+</ol>
 </div>
 </div>
 

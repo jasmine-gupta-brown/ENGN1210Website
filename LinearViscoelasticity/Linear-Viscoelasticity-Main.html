@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,84 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Linear Viscoelasticity</h2>
+        <ol>
+<li><p>To model a material’s time/rate-dependent response, a
+viscoelastic material model has at least one or more springs (elastic
+response representation) and at least one or more dashpots (viscous
+response representation). The numbers and arrangements of the springs
+and dashpots will govern the viscoelastic model’s behavior.</p></li>
+<li><p>In linear viscoelasticity, both the elastic and viscous responses
+are assumed to be linear. The principle of superposition can be applied
+(since the model is linear).</p></li>
+<li><p>Individual spring <span class="math inline">\(i\)</span> is
+modeled using Hooke’s elastic solid relation <span
+class="math inline">\(\sigma^{e^{(i)}} = E^{(i)}\,
+\epsilon^{e^{(i)}}\)</span>. Where <span
+class="math inline">\(\sigma^{e^{(i)}}, \epsilon^{e^{(i)}}\)</span> are
+stress and strain acting on spring <span
+class="math inline">\(i\)</span>, and <span
+class="math inline">\(E^{(i)}\)</span> is the elastic modulus of the
+spring <span class="math inline">\(i\)</span>.</p></li>
+<li><p>Individual dashpot <span class="math inline">\(i\)</span> is
+modeled using Newtonian fluid model <span
+class="math inline">\(\sigma^{v^{(i)}} = \eta^{(i)} \,
+\dot{\epsilon}^{v^{(i)}}\)</span>. Where <span
+class="math inline">\(\sigma^{v^{(i)}} ,
+\dot{\epsilon}^{v^{(i)}}\)</span> are stress and strain-rate acting on
+the dashpot <span class="math inline">\(i\)</span>, and <span
+class="math inline">\(\eta^{(i)}\)</span> is the viscosity of the
+dashpot <span class="math inline">\(i.\)</span> Here <span
+class="math inline">\(\dot{()}\)</span> represents the time
+derivative.</p></li>
+<li><p>A viscoelastic constitutive material model is a relationship
+between {<span class="math inline">\(\sigma, \epsilon, \dot{\sigma},
+\dot{\epsilon}\)</span>} (all or some of these) in terms of model
+parameters <span class="math inline">\(\eta\)</span>’s and <span
+class="math inline">\(E\)</span>’s. Where <span
+class="math inline">\(\sigma\)</span> and <span
+class="math inline">\(\epsilon\)</span> are the overall stress and
+strain in the viscoelastic material.<br />
+For example, for a Maxwell Model where a spring and a dashpot are in
+series, the relationship is <span
+class="math display">\[\dfrac{\dot{\sigma}}{E} + \dfrac{\sigma}{\eta} =
+\dot{\epsilon}\]</span></p></li>
+<li><p><strong>Oscillatory Rheology:</strong><br />
+Provides frequency (and/or temperature) dependent measurements of <span
+class="math inline">\(G&#39;, G&#39;&#39;\)</span> and <span
+class="math inline">\(\tan\delta\)</span> as viscoelastic material
+property parameters. <span class="math inline">\(G&#39;\)</span> is the
+<em>Storage Modulus</em>, <span
+class="math inline">\(G&#39;&#39;\)</span> is the <em>Loss Modulus</em>,
+and <span class="math inline">\(\tan\delta \; \Big( = \dfrac{G&#39;&#39;
+}{G&#39;}\Big)\)</span> is the <em>Loss Tangent</em>. <span
+class="math inline">\(\tan\delta\)</span> represents mechanical
+damping.</p></li>
+<li><p><strong>Time-Temperature Superposition (TTS):</strong> TTS is a
+principle used in linear viscoelasticity to predict the behavior of
+materials under different time and temperature conditions. It relies on
+the assumption that the effect of temperature on a viscoelastic
+material’s behavior can be represented as a shift in time (a higher
+temperature can accelerate the time effect). Temperature shift factor
+<span class="math inline">\(a_T(T)\)</span> is used to create a master
+curve. The shift factor can be obtained using Arrhenius or WLF
+(Williams-Landel-Ferry) models.</p></li>
+<li><p><strong>Integral Method:</strong><br />
+The application of the Boltzmann Superposition Principle gives integral
+relations.<br />
+<strong>Stress response for a given strain history <span
+class="math inline">\(\epsilon(t)\)</span></strong>: <span
+class="math display">\[\sigma(t) = E_r(t)\,\epsilon_0 + \int_0^t
+E_r(t-\tau) \; \dot{\epsilon}(\tau) \, d\tau,\]</span> where <span
+class="math inline">\(E_r(t)\)</span> is the time-dependent stress
+relaxation Elastic Modulus.<br />
+<strong>Strain response for a given stress history <span
+class="math inline">\(\sigma(t)\)</span></strong>: <span
+class="math display">\[\epsilon(t) = J_c(t)\, \sigma_0 + \int_0^t
+J_c(t-\tau) \; \dot{\sigma}(\tau) \, d\tau,\]</span> where <span
+class="math inline">\(J_c(t)\)</span> is the time-dependent creep
+response Compliance Modulus.</p></li>
+</ol>
 </div>
 </div>
 

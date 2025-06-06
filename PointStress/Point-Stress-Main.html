@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,51 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Stress (General/3D) at a Point</h2>
+        <p>For an orthogonal coordinate basis <span
+class="math inline">\(\bm{\hat{e}}_i\)</span></p>
+<ol type="i">
+<li><p><strong>Traction Vector (on a surface that is defined by its unit
+normal vector <span
+class="math inline">\(\bm{\hat{n}}\)</span></strong>): <span
+class="math display">\[\textbf{t}(\bm{\hat{n}})=\lim_{\mathop{}\!\mathbin\bigtriangleup
+A\to
+0}\frac{\mathop{}\!\mathbin\bigtriangleup\textbf{f}}{\mathop{}\!\mathbin\bigtriangleup\textbf{A}}\]</span></p></li>
+<li><p><strong>Stress Tensor</strong>: <span
+class="math display">\[\sigma_{ij}=\bm{\hat{e}}_i \cdot
+\textbf{t}(\bm{\hat{e}}_j)\]</span></p></li>
+<li><p><strong>Traction Vector from Stress Tensor</strong>: <span
+class="math display">\[\textbf{t}(\bm{\hat{n}}) = \bm{\sigma}
+\,\bm{\hat{n}}\]</span></p></li>
+<li><p><strong>Hydrostatic/Mechanical Pressure</strong>: <span
+class="math display">\[\quad p = -\dfrac{1}{3}\, tr\,
+\bm{\sigma}\]</span></p></li>
+<li><p><strong>Principal Stresses and Principal Directions</strong></p>
+<ul>
+<li><p>Principal stresses acting on a material point are the eigenvalues
+of the stress tensor at that material point. The directions of these
+principal stresses are given by the eigenvectors corresponding to each
+eigenvalue.</p></li>
+<li><p>Maximum <em>tensile stress</em> at a material point is the
+maximum principal stress (when positive) at that material
+point.</p></li>
+</ul></li>
+<li><p><strong>Equations of Motion/Cauchy Momentum Equations<br />
+(In the Cartesian Coordinate System)</strong></p>
+<p><span class="math display">\[\frac{\partial \sigma_{xx}}{\partial x}
++ \frac{\partial \sigma_{xy}}{\partial y} + \frac{\partial
+\sigma_{xz}}{\partial z} + b_x = \rho\frac{\partial^2 u_x}{\partial
+t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{xy}}{\partial x} + \frac{\partial \sigma_{yy}}{\partial y} +
+\frac{\partial \sigma_{yz}}{\partial z} + b_y = \rho\frac{\partial^2
+u_y}{\partial t^2}\]</span> <span class="math display">\[\frac{\partial
+\sigma_{xz}}{\partial x} + \frac{\partial \sigma_{yz}}{\partial y} +
+\frac{\partial \sigma_{zz}}{\partial z} + b_z = \rho\frac{\partial^2
+u_z}{\partial t^2}\]</span> (Equilibrium equations are obtained when
+there is no acceleration <span
+class="math inline">\({\ddot{\textbf{u}}}={\textbf{0}}\)</span>. The
+body is static.)</p></li>
+</ol>
 </div>
 </div>
 

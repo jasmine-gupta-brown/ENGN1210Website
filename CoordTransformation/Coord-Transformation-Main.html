@@ -70,7 +70,7 @@
     	.side-menu a {
         	padding: 8px 16px;
         	text-decoration: none;
-        	font-size: 25px;
+        	font-size: 16px;
         	color: white;
         	display: block;
         	transition: 0.3s;
@@ -121,6 +121,7 @@
 	<div id="sideMenu" class="side-menu">
     	<a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     	<a href="/ENGN1210Website/index.html">Home</a>
+    	<a href="/ENGN1210Website/Contact.html">Contact Us!</a>
     	<a href="/ENGN1210Website/Statics/Statics-Main.html">Statics</a>
     	<a href="/ENGN1210Website/Stress_Strain/Stress and Strain Main.html">Stress and Strain</a>
     	<a href="/ENGN1210Website/ThinPressureVessel/Thin-Pressure-Vessels-Main.html">Thin Pressure Vessels</a>
@@ -146,13 +147,35 @@
 	<!-- Unique Page Content - THIS IS WHAT YOU EDIT -->
 <div class="container">
 	<div class="content">
-  	<h2>Thin Pressure Vessels</h2>
-        <p>Explore the key topics in Thin Pressure Vessels below:</p>
-        <ul>
-            <li><a href="/ENGN1210Website/ThinPressureVessel/pressure-vessel-introduction.html">Introduction to Thin Pressure Vessels</a></li>
-            <!-- <li><a href="/ENGN1210Website/Files/poissons-ratio.html">Poisson's Ratio</a></li>
-            <li><a href="/ENGN1210Website/Files/hooks-law.html">Hooke's Law in Stress and Strain</a></li> -->
-        </ul>
+  	<h2>Coordinate Transformation</h2>
+        <p><strong>3D Transformation (General):</strong> Given a second order
+tensor <span class="math inline">\(\bm{A}\)</span> or a vector <span
+class="math inline">\(\bm{v}\)</span> in coordinate system <span
+class="math inline">\(\{\bm{e}_x, \bm{e}_y, \bm{e}_z\}\)</span>. If
+<span class="math inline">\(\bm{A}\)</span> or <span
+class="math inline">\(\bm{v}\)</span> transform to become <span
+class="math inline">\(\bm{A}^*\)</span> &amp; <span
+class="math inline">\(\bm{v}^*\)</span> for a different rotated
+coordinate system <span class="math inline">\(\{\bm{e}^*_x, \bm{e}^*_y,
+\bm{e}^*_z\}\)</span> then we can use the following relations to obtain
+components of the transformed tensor: <span
+class="math display">\[\begin{aligned}
+{{[\bm{A}^*]}_{}}_{3\text{x}3} &amp;= {{[\bm{Q}]}_{}}_{3\text{x}3}  \;
+{{[\bm{A}]}_{}}_{3\text{x}3}  \; {{[\bm{Q}^T]}_{}}_{3\text{x}3} \\
+{{[\bm{v}^*]}_{}}_{3\text{x}1} &amp;= {{[\bm{Q}]}_{}}_{3\text{x}3}  \;
+{{[\bm{v}]}_{}}_{3\text{x}1}
+\end{aligned}\]</span> where the individual components of the rotation
+tensor <span class="math inline">\(\bm{Q}\)</span> are obtained from
+<span class="math display">\[Q_{ij} = \bm{e}^*_i \cdot \bm{e}_j\]</span>
+<strong>2D Transformation - Rotation in x-y plane (e.g., Plane Stress,
+Plane Strain):</strong> <span class="math display">\[\begin{aligned}
+A^*_{xx} &amp;= \dfrac{1}{2}\,(A_{xx} + A_{yy}) +  \dfrac{1}{2}\,(A_{xx}
+- A_{yy})\, \cos 2\theta + A_{xy}\,\sin 2\theta,\\
+A^*_{yy} &amp;= \dfrac{1}{2}\,(A_{xx} + A_{yy}) -  \dfrac{1}{2}\,(A_{xx}
+- A_{yy})\, \cos 2\theta - A_{xy}\,\sin 2\theta,\\
+A^*_{xy} &amp;= -  \dfrac{1}{2}\,(A_{xx} - A_{yy})\, \sin 2\theta +
+A_{xy}\,\cos2\theta
+\end{aligned}\]</span></p>
 </div>
 </div>
 
